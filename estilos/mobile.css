@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Paplane';
+    src: url(../fonte/TT_Paplane_Trial_Regular.ttf) format('truetype'), url(../fonte/TT_Paplane_Trial_Thin.ttf) format('truetype');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F8E017;
+    height: 100px;
+    padding: 10px;
+}
+
+header > h1 {
+    font-family: 'Paplane', serif;
+    font-size: 2.5em;
+    align-self: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+menu > a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+menu > a:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    transition: 0.2s linear;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 2px;
+}
