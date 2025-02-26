@@ -11,6 +11,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: black;
+}
+
+main {
+    background-color: white;
+}
+
 header {
     display: flex;
     flex-flow: column nowrap;
@@ -30,6 +38,7 @@ header > h1 {
 }
 
 menu > a {
+    font-size: 0.8em;
     text-decoration: none;
     color: black;
     background-color: white;
@@ -48,17 +57,28 @@ menu > a:hover {
     transition: 0.2s linear;
 }
 
-h2 {
+article > h2 {
     font-size: 1.3em;
     padding: 10px;
 }
 
-p {
+article > p {
     text-align: justify;
     font-size: 0.9em;
     text-indent: 20px;
     line-height: 25px;
     padding: 10px;
+}
+
+article > aside {
+    border: 1px dashed black;
+    width: 80vw;
+    margin: auto;
+}
+
+article > aside > pre > code {
+    font-size: 0.7em;
+    text-indent: 50px;
 }
 
 footer {
@@ -70,4 +90,5 @@ footer {
 
 footer > p {
     text-align: center;
+    padding: 3px;
 }
