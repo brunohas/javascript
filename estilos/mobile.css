@@ -70,18 +70,39 @@ article > p {
     padding: 10px;
 }
 
-article > aside {
-    border: 1px dashed black;
-    width: 80vw;
-    margin: auto;
+article > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
-article > aside > pre > code {
-    font-size: 0.7em;
-    text-indent: 50px;
+main > article > div > img {
+    width: 45%;
+    margin: 10px;
+    
+}
+
+img.esq {
+    float: left;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0);
+}
+
+img.dir {
+    float: right;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0);
+}
+
+iframe {
+    width: 80vw;
+    border: 1px solid black;
+}
+
+p#iframe {
+    text-align: center;
 }
 
 footer {
+    display: block;
     font-size: 0.7em;
     color: white;
     background-color: black;
