@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos JavaScript</title>
+    <link rel="stylesheet" href="../estilos/mobile.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+        <menu>
+            <a href="../index.html" rel="prev">Início</a>
+            <a href="../paginas/como_usar.html" rel="next">Como usar JS</a>
+            <a href="#">Opção 3</a>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Variáveis</h2>
+            <p>
+                Para criar as variáveis usamos nomes simbólicos para os valores em sua aplicação, o nome das variáveis não podem começar com números, porém podem começar com uma letra qualquer (maiúscula ou minúscula), sublinhado (<strong>_</strong>), ou cifrão (<strong>$</strong>), já os carateres subsequentes podem ser números. Exemplo: (nome / _idade / $salario / vaga1).
+            </p>
+            <p>
+                Podemos declarar uma variável de duas formas:
+            </p>
+            <aside>
+                <ul>
+                    <li>var + <strong>nome da variável</strong> &rarr; declara uma variável global (variável disponível para qualquer outro código no documento atual), opcionalmente, inicializando-a com um valor.</li>
+                    <li>let + <strong>nome da variável</strong> &rarr; declara uma variável local (variável disponível somente dentro da função em que ela foi criada), opcionalmente, inicializando-a com um valor.</li>
+                </ul>
+            </aside>
+            <p>
+                Se você criar uma variável e não especificar o valor inicial, ela irá ter o valor <strong>undefined</strong>, já se você tentar acessar um variável inexistente, resultará no lançamento de uma exeção <strong>ReferenceError</strong>, exemplo:
+            </p>
+            <img src="../imagens/js1.png" alt="Exemplo variável">
+            <p>
+                Você pode usar <strong>undefined</strong> para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração <strong>if</strong> será avaliada como verdadeira (<strong>true</strong>).
+            </p>
+            <img src="../imagens/js2.png" alt="Exemplo variável">
+            <p>
+                O valor <strong>undefined</strong> se comporta como falso (<strong>false</strong>), quando usado em um contexto booleano. Por exemplo, o código a seguir executa a função <strong>myFunction</strong> devido ao elemento <strong>myArray</strong> ser indefinido:
+            </p>
+            <img src="../imagens/js3.png" alt="Exemplo variável">
+            <p>
+                O valor <strong>undefined</strong> coverte-se para <strong>NaN</strong> (Not A Number) quando usado no contexto numérico.
+            </p>
+            <img src="../imagens/js4.png" alt="Exemplo variável">
+            <p>
+                Quando você avalia uma variável nula (<strong>null</strong>), o valor nulo se comporta como 0 em contexto numéricos, e como falso (<strong>false</strong>) em contextos booleanos. 
+            </p>
+            <img src="../imagens/js5.png" alt="Exemplo variável">
+        </article>
+        <article class="seg">
+            <h2>Constantes</h2>
+            <p>
+                Você pode criar uma constante apenas de leitura por meio da palavra-chave <strong>const</strong>. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: o nome de uma constante não pode começar com números, porém podem começar com uma letra qualquer (maiúscula ou minúscula), sublinhado (<strong>_</strong>), ou cifrão (<strong>$</strong>), já os carateres subsequentes podem ser números. Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução, deve ser inicializada com um valor.
+            </p>
+            <p>
+                As regras de escopo para as constantes são as mesmas para as váriaveis <strong>let</strong> de escopo de bloco. Se a palavra-chave <strong>const</strong> for omitida, presume-se que o identificador represente uma variável. Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo.
+            </p>
+            <img src="../imagens/constante.png" alt="Exemplo constante">
+        </article>
+        <article class="seg">
+            <h2>Tipos primitivos</h2>
+            <p>
+                Os tipos primitivos em <strong>JavaScript</strong> são valores simples e imutáveis, são usados para representar informações básicas e usuais, existem 7 tipos de dados:
+            </p>
+            <aside>
+                <ul>
+                    <li><strong>Boolean</strong> &rarr; tipo de dado lógico que pode ter apenas um de dois valores possíveis: verdadeiro (<strong>true</strong>) ou falso (<strong>false</strong>).</li>
+                    <li><strong>null</strong> &rarr; indica um valor nulo.</li>
+                    <li><strong>undefined</strong> &rarr; indica que o valor é indefinido.</li>
+                    <li><strong>Symbol</strong> &rarr; indica que os valores desse tipo podem ser usados para fazer propriedades de objetos anônimos.</li>
+                    <li><strong>Object</strong> &rarr; refere-se a uma estrutura de dados contendo dados e instruções para se trabalhar com estes dados. Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida.</li>
+                    <li><strong>String</strong> &rarr; indica um valor como uma cadeia de caracteres.</li>
+                    <li><strong>Number</strong> &rarr; indica um valor numérico (inteiros e reais).</li>
+                    <ul style="text-indent: 50px;">
+                        <li><strong>NaN</strong> &rarr; significa Not a Number (não é um número), valor de retorno de operações que não podem ser expressas como um número.</li>
+                        <li><strong>Infinity</strong> &rarr; representa o infinito matemático, um valor especial maior que qualquer número, é obtido como resultado da divisão por zero.</li>
+                        <li><strong>-Infinity</strong> &rarr; valor especial infinito negativo, retornado em overflow.</li>
+                    </ul>
+                </ul>
+            </aside>
+            <p>
+                Eles só podem armazenar um único dado, não têm métodos e são imutáveis. A variável pode ser reatribuída a um novo valor, mas o valor primitivo existente não pode ser alterado como fazemos com arrays ou objetos. Para saber qual é o tipo primitivo do elemento, utilizamos <strong>typeof</strong>. 
+            </p>
+        </article>
+        <article class="seg">
+            <h2>Array / Vetor</h2>
+            <p>
+                
+            </p>
+        </article>
+        <article class="seg">
+            <h2>Function</h2>
+        </article>
+        <br>
+    </main>
+    <footer>
+        <p>
+            Esse site foi feito por <strong>Bruno Henrique</strong> afins de estudos!
+        </p>
+    </footer>
+</body>
+</html>
