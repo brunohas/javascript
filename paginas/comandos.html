@@ -64,7 +64,7 @@
         <article class="seg">
             <h2>Tipos primitivos</h2>
             <p>
-                Os tipos primitivos em <strong>JavaScript</strong> são valores simples e imutáveis, são usados para representar informações básicas e usuais, existem 7 tipos de dados:
+                Os tipos primitivos em <strong>JavaScript</strong> são valores simples e imutáveis, são usados para representar informações básicas e usuais, conseguimos identificar qual é o tipo primitivo utilizando <strong>typeof</strong>, agora segue os 7 tipos de dados:
             </p>
             <aside>
                 <ul>
@@ -83,8 +83,31 @@
                 </ul>
             </aside>
             <p>
-                Eles só podem armazenar um único dado, não têm métodos e são imutáveis. A variável pode ser reatribuída a um novo valor, mas o valor primitivo existente não pode ser alterado como fazemos com arrays ou objetos. Para saber qual é o tipo primitivo do elemento, utilizamos <strong>typeof</strong>. 
+                Converter o tipo primitivo de um elemento
             </p>
+            <ul>
+                <li>Number.parseInt( ) &rarr; converte para Number = número inteiro </li>
+                <li>Number.parseFloat( ) &rarr; converte para Number = número real</li>
+                <li>Number( ) &rarr; converte para Number = próprio JS decide se é inteiro ou real</li>
+                <li>String( ) &rarr; converte para String</li>
+                <li>_.toString() &rarr; converte para String</li>
+            </ul>
+            <p>
+                Formatando String
+            </p>
+            <ul>
+                <li>.length &rarr; quantos caracteres a string tem</li>
+                <li>.toUpperCase( ) &rarr; tudo para maiúscula</li>
+                <li>.toLowerCase( ) &rarr; tudo para minúscula</li>
+            </ul>
+            <p>
+                Formatando Números
+            </p>
+            <ul>
+                <li>.toFixed(n°) &rarr; n° p/ qnt de casas decimais</li>
+                <li>.replace(' ', ' ') &rarr; troca elementos</li>
+                <li>.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</li>
+            </ul>
         </article>
         <article class="seg">
             <h2>Array / Vetor</h2>
