@@ -88,11 +88,13 @@ article > p {
     padding: 10px;
 }
 
+/*
 article > div {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 }
+*/
 
 img {
     display: block;
@@ -102,6 +104,7 @@ img {
     max-width: 800px;
 }
 
+/*
 img.esq {
     float: left;
     box-shadow: -2px 2px 5px rgba(0, 0, 0);
@@ -113,6 +116,7 @@ img.dir {
     box-shadow: 2px 2px 5px rgba(0, 0, 0);
     margin-right: 10px;
 }
+*/
 
 iframe {
     width: 80%;

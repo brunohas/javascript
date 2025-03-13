@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos JavaScript</title>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>JavaScript</title>
     <link rel="stylesheet" href="../estilos/mobile.css">
 </head>
 <body>
@@ -99,6 +100,8 @@
                 <li>.length &rarr; quantos caracteres a string tem</li>
                 <li>.toUpperCase( ) &rarr; tudo para maiúscula</li>
                 <li>.toLowerCase( ) &rarr; tudo para minúscula</li>
+                <li>.split( ) &rarr; divide</li>
+                <li>.push( ) &rarr; adiciona</li>
             </ul>
             <p>
                 Formatando Números
@@ -108,11 +111,22 @@
                 <li>.replace(' ', ' ') &rarr; troca caracteres</li>
                 <li>.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</li>
             </ul>
+            <p>
+                Acessar / selecionar elementos HTML
+            </p>
+            <ul>
+                <li>window.document.getElementsByTagName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da tag / ex: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...</li>
+                <li>window.document.getElementById(' ') &rarr; selecionar o elemento pelo ID / ex: .getElementById('inum'), seleciona o elemento que tem o <strong>id="inum"</strong></li>
+                <li>window.document.getElementsByName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong> / ex: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade <strong>name="num1"</strong></li>
+                <li>window.document.getElementsByClassName(' ') &rarr; seleciona o(s) elemento(s) pelo class / ex: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o <strong>class='msg'</strong></li>
+                <li>window.document.querySelector(' ') &rarr; seleciona o elemento específico / ex: .querySelector('div.img'), seleciona a tag <strong>&lt;div&gt;</strong> com o <strong>class="img"</strong></li>
+                <li>window.document.querySelectorAll(' ') &rarr; seleciona o(s) elemento(s) específico(s) / ex: .querySelectorAll('.msg'), seleciona todos os elementos que tem o <strong>class="msg"</strong></li>
+            </ul>
         </article>
         <article class="seg">
             <h2>Array / Vetor</h2>
             <p>
-                
+               
             </p>
         </article>
         <article class="seg">
