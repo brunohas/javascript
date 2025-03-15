@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../estilos/mobile.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+        <menu>
+            <a href="../index.html" rel="prev">Início</a>
+            <a href="../paginas/como_usar.html" rel="next">Como usar JS</a>
+            <a href="../paginas/var_primitivos.html">Variáveis / Tipos Primitivos</a>
+        </menu>
+    </header>
+    <main>
+        <article class="seg">
+            <h2 style="text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); text-decoration: underline;">Tipos de Eventos DOM</h2>
+            <h3>Event Object Events</h3>
+            <p>
+                Todos os objetos de evento no HTML DOM são baseados no <strong>Event Object</strong>, todos tem acesso às propriedades e métodos dele. <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" rel="external" target="_blank">Clique aqui</a> para ir na página da <strong>W3schools</strong> que tem todos os tipos de eventos DOM e suas propriedades.
+            </p>
+            <p>
+                Obs: No HTML utilizamos <strong>onclick="nome função"</strong>, já se você quiser colocar pelo arquivo <strong>JavaScript</strong>, utiliza-se <strong>.addEventListener( )</strong> <br> Exemplo: <strong>div#menu.addEventListener('click', nome função)</strong> 
+            </p>
+        </article>
+        <article>
+            
+            <h3>TouchEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando o usuário toca na tela de um dispositivo touchscreen.
+            </p>
+            <ul>
+                <li><strong>ontouchstart=" "</strong> &rarr; quando o dedo é colocado em uma tela sensível ao toque.</li>
+                <li><strong>ontouchend=" "</strong> &rarr; quando o dedo é removido de uma tela sensível ao toque.</li>
+                <li><strong>ontouchcancel=" "</strong> &rarr; quando o toque é interrompido.</li>
+                <li><strong>ontouchmove=" "</strong> &rarr; quando o dedo é arrastado pela tela.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>MouseEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando o mouse interage com o documento HTML.
+            </p>
+            <ul>
+                <li><strong>onclick=" "</strong> &rarr; quando clicar no elemento.</li>
+                <li><strong>oncontextmenu=" "</strong> &rarr; quando clicar no elemento com mouse direito.</li>
+                <li><strong>ondblclick=" "</strong> &rarr; quando clicar 2 vezes no elemento.</li>
+                <li><strong>onmouseenter=" "</strong> &rarr; quando o cursor do mouse 'entrar' no elemento.</li>
+                <li><strong>onmouseout=" "</strong> &rarr; quando o cursor do mouse 'sair' de qualquer elemento filho, bem como do elemento selecionado.</li>
+                <li><strong>onmouseleave=" "</strong> &rarr; quando o cursor do mouse 'sair' do elemento selecionado.</li>
+                <li><strong>onmousemove=" "</strong> &rarr; quando o cursor do mouse se move sobre o elemento.</li>
+                <li><strong>onmouseover=" "</strong> &rarr; quando o cursor do mouse passa sobre o elemento, dispara a function.</li>
+                <li><strong>onmousedown=" "</strong> &rarr; quando o mouse e pressionado sobre o elemento.</li>
+                <li><strong>onmouseup=" "</strong> &rarr; quando o mouse não estiver mais pressionado sobre o elemento.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>DragEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando elementos são arrastados ou soltos.
+            </p>
+            <ul>
+                <li><strong>ondrag=" "</strong> &rarr; quando o elemento estiver sendo arrastado.</li>
+                <li><strong>ondragend=" "</strong> &rarr; quando o elemento terminou de ser arrastado.</li>
+                <li><strong>ondragenter=" "</strong> &rarr; quando o elemento arrastado entra no destino de soltar.</li>
+                <li><strong>ondragleave=" "</strong> &rarr; quando o elemento arrastado sai do destino de soltar.</li>
+                <li><strong>ondragover=" "</strong> &rarr; quando o elemento arrastado está sobre o destino de soltar.</li>
+                <li><strong>ondragstart=" "</strong> &rarr; quando o usuário começa a arrastar o elemento.</li>
+                <li><strong>ondrop=" "</strong> &rarr; quando o elemento arrastado é solto no alvo.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>KeyboardEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando um usuário pressiona uma tecla no teclado.
+            </p>
+            <ul>
+                <li><strong>onkeydown=" "</strong> &rarr; quando o usuário pressiona uma tecla (usado p/ detectar quando teclas modificadoras são pressionadas).</li>
+                <li><strong>onkeypress=" "</strong> &rarr; quando o usuário pressiona e solta uma tecla (não é disparado em teclas que não geram caracteres, ex: F1~F12 / tab / esc / etc).</li>
+                <li><strong>onkeyup=" "</strong> &rarr; quando o usuário solta uma tecla (usado p/ detectar quando teclas modificadoras são liberadas).</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>AnimationEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando uma animação CSS é executada.
+            </p>
+            <ul>
+                <li><strong>animationstart=" "</strong> &rarr; quando uma animação CSS for iniciada.</li>
+                <li><strong>animationend=" "</strong> &rarr; quando uma animação CSS for concluída.</li>
+                <li><strong>animationiteration=" "</strong> &rarr; quando uma animação CSS for repetida.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>ClipboardEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando a área de transferência é modificada.
+            </p>
+            <ul>
+                <li><strong>oncopy=" "</strong> &rarr; quando um usuário copia o conteúdo de um elemento.</li>
+                <li><strong>oncut=" "</strong> &rarr; quando um usuário corta o conteúdo de um elemento.</li>
+                <li><strong>onpaste=" "</strong> &rarr; quando um usuário cola o conteúdo do elemento copiado.</li>
+            </ul>
+        </article>
+        <article class=seg>
+            <h3>FocusEvent</h3>
+            <p>
+                Manipula eventos que ocorrem quando elementos recebem ou perdem o foco.
+            </p>
+            <ul>
+                <li><strong>onblur=" "</strong> &rarr; quando o elemento perde o foco.</li>
+                <li><strong>onfocus=" "</strong> &rarr; quando o elemento ganha o foco.</li>
+                <li><strong>onfocusin=" "</strong> &rarr; quando o elemento está prestes a ganhar foco.</li>
+                <li><strong>onfocusout=" "</strong> &rarr; quando o elemento está prestes a perder foco.</li>
+            </ul>
+        </article>
+        
+        <article class="seg">
+            <h4>Propriedades</h4>
+            <p>
+                Fornecem detalhes sobre o evento que foi disparado, essas propriedades permitem que o manipulador de eventos seja mais inteligente e útil.
+            </p>
+            
+        </article>
+    </main>
+    <footer>
+        <p>
+            Esse site foi feito por <strong>Bruno Henrique</strong> afins de estudos!
+        </p>
+    </footer>
+</body>
+</html>
