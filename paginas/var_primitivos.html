@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <title>JavaScript</title>
-    <link rel="stylesheet" href="../estilos/mobile.css">
+    <link rel="stylesheet" href="../estilos/mobile.css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <script src="../script.js"></script>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>JavaScript</h1>
-        <menu>
-            <a href="../index.html" rel="prev">Início</a>
-            <a href="../paginas/como_usar.html" rel="next">Como usar JS</a>
-            <a href="../paginas/event_dom.html" rel="next">Eventos DOM</a>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">  
+            <ul>
+                <li><a href="../index.html" rel="prev">Início</a></li>
+                <li><a href="../paginas/como_usar.html" rel="next">Como usar JS</a></li>
+                <li><a href="../paginas/event_dom.html" rel="next">Eventos DOM</a></li>
+            </ul>
         </menu>
     </header>
     <main>
