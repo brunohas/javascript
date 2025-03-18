@@ -59,7 +59,7 @@ menu#itens > ul {
 menu#itens > ul > li > a {
     display: block;
     padding: 8px;
-    margin: 3px;
+    margin: 2px;
     text-decoration: none;
     text-align: center;
     background-color: rgb(30, 30, 30);
