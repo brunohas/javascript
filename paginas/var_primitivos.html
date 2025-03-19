@@ -150,10 +150,73 @@
             </ul>
             <p>Outros</p>
             <ul>
-                <li>document.createElement(' ') &rarr; cria um elemento / ex: .createElement('img'), cria um elemento &lt;img&gt;</li>
+                <li>document.createElement(' ') &rarr; cria um elemento HTML/ ex: .createElement('img'), cria um elemento &lt;img&gt;</li>
                 <li>.setAttribute(' ') &rarr; cria um atributo para a tag escolhida / ex: img.setAttribute('id', 'foto'), cria um id="foto" para a tag &lt;img&gt;</li>
                 <li>.appendChild(' ') &rarr; adiciona um elemento filho / ex: div.appendChild(img), adiciona a tag &lt;img&gt; dentro da tag &lt;div&gt;</li>
+                <li>document.TAG_HTML.style.CSS = ' ' &rarr; altera o estilo CSS de uma tag HTML / ex: document.div.style.background = '#000', muda cor de fundo da tag &lt;div&gt;</li>
             </ul>
+            <p>
+                Estrutura de controle condicional
+            </p>
+            <ul>
+                <li>if &rarr; significa <strong>se</strong>, ex: if (idade &lt; 18) { ... } = se idade for menor que 18 faça...</li>
+                <li>else &rarr; significa <strong>senão</strong>, ex: else { ... } = senão faça... (só executa se o if for falso)</li>
+                <li>else if &rarr; significa <strong>senão se</strong>, é utilizado quando tem mais que uma opção para a escolha do if</li>
+                <li>switch &rarr; significa <strong>trocar</strong>, especifica diversos blocos alternativos para serem executados, ex: switch (expressão) { case 'a': ... break; case 'b': ... break; default: ... } = trocar, se for 'a' faça... pare; se for 'b' faça... pare; senão faça... pare.</li>
+            </ul>
+            <p>
+                Estrutura de controle de repetição
+            </p>
+            <aside>
+                <p>
+                    while ( ) &rarr; estrutura de repetição com teste lógico no início. <br> Exemplo:
+                </p>
+                    <pre>
+                        <code>
+var c = 1
+while (c &lt;= 6) {
+    innerHTML += `Passo ${c}`
+    c += 1
+}              
+                        </code>
+                    </pre>
+                <p>
+                    Que no literal ficaria assim: <br>Enquanto c for menor ou igual a 6 faça: <br> Mostre na tela o valor de c e depois some 1 a c.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    do { while ( ) } &rarr; estrutura de repetição com teste lógico no final. <br> Exemplo:
+                </p>
+                <pre>
+                    <code>
+var c = 1
+do {
+    innerHTML += `Passo ${c}`
+    c += 1
+} while (c &lt;= 6)              
+                        
+                    </code>
+                </pre>
+                <p>
+                    Que no literal ficaria assim: <br> Faça: <br> Mostre na tela o valor de c e depois some 1 a c.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    for (inicio ; teste; incremento) &rarr; estrutura de repetição com teste lógico somente se a condição for verdadeira. <br> Exemplo:
+                </p>
+                <pre>
+                    <code>
+for (var c = 1; c &lt;= 6; c += 1) {
+    innerHTML += `Passo ${c}`
+}              
+                    </code>
+                </pre>
+                <p>
+                    Que no literal ficaria assim: <br> Enquanto a variável de inicio (c = 1) for menor ou igual ao teste (c &lt; = 6) mostre na tela o valor de c, e depois some mais 1 a c (c += 1).
+                </p>
+            </aside>
         </article>
         <article class="seg">
             <h2>Array / Vetor</h2>
