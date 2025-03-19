@@ -141,6 +141,7 @@ aside {
     border: 2px groove black;
     width: 90%;
     margin: auto;
+    margin-bottom: 5px;
     padding: 5px;
     text-align: justify;
 }
@@ -209,5 +210,14 @@ footer > p {
         max-width: 950px;
         margin: auto;
         padding-bottom: 20px;
+    }
+
+    article {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    article.seg {
+        border-radius: 15px;
     }
 }

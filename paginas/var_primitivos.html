@@ -72,22 +72,34 @@
             <p>
                 Os tipos primitivos em <strong>JavaScript</strong> são valores simples e imutáveis, são usados para representar informações básicas e usuais, conseguimos identificar qual é o tipo primitivo utilizando <strong>typeof</strong>, agora segue os 7 tipos de dados:
             </p>
-            <aside>
                 <ul>
-                    <li><strong>Boolean</strong> &rarr; tipo de dado lógico que pode ter apenas um de dois valores possíveis: verdadeiro (<strong>true</strong>) ou falso (<strong>false</strong>).</li>
-                    <li><strong>null</strong> &rarr; indica um valor nulo.</li>
-                    <li><strong>undefined</strong> &rarr; indica que o valor é indefinido.</li>
-                    <li><strong>Symbol</strong> &rarr; indica que os valores desse tipo podem ser usados para fazer propriedades de objetos anônimos.</li>
-                    <li><strong>Object</strong> &rarr; refere-se a uma estrutura de dados contendo dados e instruções para se trabalhar com estes dados. Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida.</li>
-                    <li><strong>String</strong> &rarr; indica um valor como uma cadeia de caracteres.</li>
-                    <li><strong>Number</strong> &rarr; indica um valor numérico (inteiros e reais).</li>
-                    <ul style="text-indent: 50px;">
-                        <li><strong>NaN</strong> &rarr; significa Not a Number (não é um número), valor de retorno de operações que não podem ser expressas como um número.</li>
-                        <li><strong>Infinity</strong> &rarr; representa o infinito matemático, um valor especial maior que qualquer número, é obtido como resultado da divisão por zero.</li>
-                        <li><strong>-Infinity</strong> &rarr; valor especial infinito negativo, retornado em overflow.</li>
-                    </ul>
+                    <aside>
+                        <li><strong>Boolean</strong> &rarr; tipo de dado lógico que pode ter apenas um de dois valores possíveis: verdadeiro (<strong>true</strong>) ou falso (<strong>false</strong>).</li>
+                    </aside>
+                    <aside>
+                        <li><strong>null</strong> &rarr; indica um valor nulo.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>undefined</strong> &rarr; indica que o valor é indefinido.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Symbol</strong> &rarr; indica que os valores desse tipo podem ser usados para fazer propriedades de objetos anônimos.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Object</strong> &rarr; refere-se a uma estrutura de dados contendo dados e instruções para se trabalhar com estes dados. Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>String</strong> &rarr; indica um valor como uma cadeia de caracteres.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Number</strong> &rarr; indica um valor numérico (inteiros e reais).</li>
+                        <ul style="text-indent: 50px;">
+                            <li><strong>NaN</strong> &rarr; significa Not a Number (não é um número), valor de retorno de operações que não podem ser expressas como um número.</li>
+                            <li><strong>Infinity</strong> &rarr; representa o infinito matemático, um valor especial maior que qualquer número, é obtido como resultado da divisão por zero.</li>
+                            <li><strong>-Infinity</strong> &rarr; valor especial infinito negativo, retornado em overflow.</li>
+                        </ul>
+                    </aside>
                 </ul>
-            </aside>
             <p>
                 Converter o tipo primitivo de um elemento
             </p>
@@ -115,17 +127,26 @@
                 <li>.toFixed(n°) &rarr; n° p/ qnt de casas decimais</li>
                 <li>.replace(' ', ' ') &rarr; troca caracteres</li>
                 <li>.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</li>
+                <li>new Date() &rarr; mostra dia, mês, ano, data e hora atual</li>
+                <li>new Date() + .getHours &rarr; mostra o horário atual</li>
+                <li>new Date() + .getMinutes &rarr; mostra o minuto atual</li>
+                <li>new Date() + .getSeconds &rarr; mostra o segundo atual</li>
+                <li>new Date() + .getMilliseconds &rarr; mostra o milissegundo atual</li>
+                <li>new Date() + .getDay &rarr; mostra o dia da semana atual</li>
+                <li>new Date() + .getDate &rarr; mostra o dia do mês atual</li>
+                <li>new Date() + .getMonth &rarr; mostra o mês atual</li>
+                <li>new Date() + .getFullYear &rarr; mostra o ano atual</li>
             </ul>
             <p>
                 Acessar / selecionar elementos HTML
             </p>
             <ul>
-                <li>window.document.getElementsByTagName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da tag / ex: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...</li>
-                <li>window.document.getElementById(' ') &rarr; selecionar o elemento pelo ID / ex: .getElementById('inum'), seleciona o elemento que tem o <strong>id="inum"</strong></li>
-                <li>window.document.getElementsByName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong> / ex: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade <strong>name="num1"</strong></li>
-                <li>window.document.getElementsByClassName(' ') &rarr; seleciona o(s) elemento(s) pelo class / ex: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o <strong>class='msg'</strong></li>
-                <li>window.document.querySelector(' ') &rarr; seleciona o elemento específico / ex: .querySelector('div.img'), seleciona a tag <strong>&lt;div&gt;</strong> com o <strong>class="img"</strong></li>
-                <li>window.document.querySelectorAll(' ') &rarr; seleciona o(s) elemento(s) específico(s) / ex: .querySelectorAll('.msg'), seleciona todos os elementos que tem o <strong>class="msg"</strong></li>
+                <li>document.getElementsByTagName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da tag / ex: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...</li>
+                <li>document.getElementById(' ') &rarr; selecionar o elemento pelo ID / ex: .getElementById('inum'), seleciona o elemento que tem o <strong>id="inum"</strong></li>
+                <li>document.getElementsByName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong> / ex: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade <strong>name="num1"</strong></li>
+                <li>document.getElementsByClassName(' ') &rarr; seleciona o(s) elemento(s) pelo class / ex: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o <strong>class='msg'</strong></li>
+                <li>document.querySelector(' ') &rarr; seleciona o elemento específico / ex: .querySelector('div.img'), seleciona a tag <strong>&lt;div&gt;</strong> com o <strong>class="img"</strong></li>
+                <li>document.querySelectorAll(' ') &rarr; seleciona o(s) elemento(s) específico(s) / ex: .querySelectorAll('.msg'), seleciona todos os elementos que tem o <strong>class="msg"</strong></li>
             </ul>
         </article>
         <article class="seg">
