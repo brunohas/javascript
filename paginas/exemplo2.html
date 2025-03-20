@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        div {
+            background-color: green;
+            margin: auto;
+            padding: 25px;
+            cursor: pointer;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script src="exemplo.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Interaja com esse bloco</h1>
+    </header>
+    <main>
+        <div onmouseover="entrou()" onmouseout="saiu()" onclick="clicou()">
+            <p>
+                Intereja!
+            </p>
+        </div> 
+    </main>
+</body>
+</html>
