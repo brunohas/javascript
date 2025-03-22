@@ -101,14 +101,23 @@
                     </aside>
                 </ul>
             <p>
-                Converter o tipo primitivo de um elemento
+                Converter o tipo primitivo de um elemento.
             </p>
             <ul>
-                <li>Number.parseInt( ) &rarr; converte para Number = número inteiro </li>
-                <li>Number.parseFloat( ) &rarr; converte para Number = número real</li>
+                <li>.parseInt( ) &rarr; converte para Number = número inteiro </li>
+                <li>.parseFloat( ) &rarr; converte para Number = número real</li>
                 <li>Number( ) &rarr; converte para Number = próprio JS decide se é inteiro ou real</li>
                 <li>String( ) &rarr; converte para String</li>
-                <li>_.toString() &rarr; converte para String</li>
+                <li>Boolean( ) &rarr; converte para Boolean</li>
+            </ul>
+            <ul>
+                <li>isNaN( ) &rarr; verifica se é um NaN</li>
+                <li>Array.isArray( ) &rarr; verifica se é um array</li>
+                <li>Number.isInteger( ) &rarr; verifica se é um número inteiro</li>
+                <li>Number.isNaN( ) &rarr; verifica se é um NaN</li>
+                <li>Number.isFinite( ) &rarr; verifica se é um número finito</li>
+                <li>Number.isSafeInteger( ) &rarr; verifica se é um número inteiro seguro</li>
+                <li>Number.MAX_VALUE &rarr; verifica o maior número possível</li>
             </ul>
             <p>
                 Formatando String
@@ -243,6 +252,13 @@ for (var c = 1; c &lt;= 6; c += 1) {
                 <li>.split() &rarr; divide uma string em um array de substrings com base em um separador especificado.</li>
                 <li>.indexOf() &rarr; busca valor dentro do array e retorna o índice da primeira ocorrência do valor especificado, ou -1 se o valor não for encontrado.</li>
             </ul>
+        </article>
+        <article class="seg">
+            <h2>Object</h2>
+            <p>
+                O objeto em <strong>JavaScript</strong> é uma estrutura de dados que armazena uma coleção de pares de chave-valor, onde cada chave é uma string que representa o nome de um atributo e o valor é o valor correspondente desse atributo. Para criar um objeto em <strong>JavaScript</strong>, você pode usar <strong>chaves { }</strong> e separar os pares de chave-valor por vírgulas. Exemplo: <strong>var pessoa = { nome: 'João', idade: 30, cidade: 'São Paulo' }</strong>.
+            </p>
+
         </article>
         <br>
     </main>
