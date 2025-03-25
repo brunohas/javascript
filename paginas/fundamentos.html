@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../estilos/mobile.css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <script src="../script.js"></script>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>JavaScript</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">  
+            <ul>
+                <li><a href="../index.html" rel="prev">Início</a></li>
+                <li><a href="../paginas/como_usar.html" rel="next">Como usar JS</a></li>
+                <li><a href="../paginas/event_dom.html" rel="next">Eventos DOM</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Variáveis</h2>
+            <p>
+                Para criar as variáveis usamos nomes simbólicos para os valores em sua aplicação, o nome das variáveis não podem começar com números, porém podem começar com uma letra qualquer (maiúscula ou minúscula), sublinhado (<strong>_</strong>), ou cifrão (<strong>$</strong>), já os carateres subsequentes podem ser números. Exemplo: (nome / _idade / $salario / vaga1).
+            </p>
+            <p>
+                Podemos declarar uma variável de duas formas:
+            </p>
+            <aside>
+                <ul>
+                    <li>var + <strong>nome da variável</strong> &rarr; declara uma variável global (variável disponível para qualquer outro código no documento atual), opcionalmente, inicializando-a com um valor.</li>
+                    <li>let + <strong>nome da variável</strong> &rarr; declara uma variável local (variável disponível somente dentro da função em que ela foi criada), opcionalmente, inicializando-a com um valor.</li>
+                </ul>
+            </aside>
+            <p>
+                Se você criar uma variável e não especificar o valor inicial, ela irá ter o valor <strong>undefined</strong>, já se você tentar acessar um variável inexistente, resultará no lançamento de uma exeção <strong>ReferenceError</strong>, exemplo:
+            </p>
+            <img src="../imagens/js1.png" alt="Exemplo variável">
+            <p>
+                Você pode usar <strong>undefined</strong> para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração <strong>if</strong> será avaliada como verdadeira (<strong>true</strong>).
+            </p>
+            <img src="../imagens/js2.png" alt="Exemplo variável">
+            <p>
+                O valor <strong>undefined</strong> se comporta como falso (<strong>false</strong>), quando usado em um contexto booleano. Por exemplo, o código a seguir executa a função <strong>myFunction</strong> devido ao elemento <strong>myArray</strong> ser indefinido:
+            </p>
+            <img src="../imagens/js3.png" alt="Exemplo variável">
+            <p>
+                O valor <strong>undefined</strong> coverte-se para <strong>NaN</strong> (Not A Number) quando usado no contexto numérico.
+            </p>
+            <img src="../imagens/js4.png" alt="Exemplo variável">
+            <p>
+                Quando você avalia uma variável nula (<strong>null</strong>), o valor nulo se comporta como 0 em contexto numéricos, e como falso (<strong>false</strong>) em contextos booleanos. 
+            </p>
+            <img src="../imagens/js5.png" alt="Exemplo variável">
+        </article>
+        <article class="seg">
+            <h2>Constantes</h2>
+            <p>
+                Você pode criar uma constante apenas de leitura por meio da palavra-chave <strong>const</strong>. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: o nome de uma constante não pode começar com números, porém podem começar com uma letra qualquer (maiúscula ou minúscula), sublinhado (<strong>_</strong>), ou cifrão (<strong>$</strong>), já os carateres subsequentes podem ser números. Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução, deve ser inicializada com um valor.
+            </p>
+            <p>
+                As regras de escopo para as constantes são as mesmas para as váriaveis <strong>let</strong> de escopo de bloco. Se a palavra-chave <strong>const</strong> for omitida, presume-se que o identificador represente uma variável. Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo.
+            </p>
+            <img src="../imagens/constante.png" alt="Exemplo constante">
+        </article>
+        <article class="seg">
+            <h2>Tipos primitivos</h2>
+            <p>
+                Os tipos primitivos em <strong>JavaScript</strong> são valores simples e imutáveis, são usados para representar informações básicas e usuais, conseguimos identificar qual é o tipo primitivo utilizando <strong>typeof</strong>, agora segue os 7 tipos de dados:
+            </p>
+                <ul>
+                    <aside>
+                        <li><strong>Boolean</strong> &rarr; tipo de dado lógico que pode ter apenas um de dois valores possíveis: verdadeiro (<strong>true</strong>) ou falso (<strong>false</strong>).</li>
+                    </aside>
+                    <aside>
+                        <li><strong>null</strong> &rarr; indica um valor nulo.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>undefined</strong> &rarr; indica que o valor é indefinido.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Symbol</strong> &rarr; indica que os valores desse tipo podem ser usados para fazer propriedades de objetos anônimos.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Object</strong> &rarr; refere-se a uma estrutura de dados contendo dados e instruções para se trabalhar com estes dados. Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>String</strong> &rarr; indica um valor como uma cadeia de caracteres.</li>
+                    </aside>
+                    <aside>
+                        <li><strong>Number</strong> &rarr; indica um valor numérico (inteiros e reais).</li>
+                        <ul style="text-indent: 50px;">
+                            <li><strong>NaN</strong> &rarr; significa Not a Number (não é um número), valor de retorno de operações que não podem ser expressas como um número.</li>
+                            <li><strong>Infinity</strong> &rarr; representa o infinito matemático, um valor especial maior que qualquer número, é obtido como resultado da divisão por zero.</li>
+                            <li><strong>-Infinity</strong> &rarr; valor especial infinito negativo, retornado em overflow.</li>
+                        </ul>
+                    </aside>
+                </ul>
+            <p>
+                Conseguimos converter o tipo primitivo de um elemento usando:
+            </p>
+            <ul>
+                <li><strong>.parseInt( )</strong> &rarr; converte para Number = número inteiro.</li>
+                <li><strong>.parseFloat( )</strong> &rarr; converte para Number = número real.</li>
+                <li><strong>Number( )</strong> &rarr; converte para Number = próprio JS decide se é inteiro ou real.</li>
+                <li><strong>String( )</strong> &rarr; converte para String.</li>
+                <li><strong>Boolean( )</strong> &rarr; converte para Boolean.</li>
+            </ul>
+            <p>
+                Para verificar o tipo primitivo de um elemento, podemos utilizar o parâmetro <strong>typeof</strong> ou alguns desses comandos:
+            </p>
+            <ul>
+                <li><strong>.isNaN( )</strong> &rarr; verifica se é um NaN (<abbr title="Não é um número">Not A Number</abbr>).</li>
+                <li><strong>.isArray( )</strong> &rarr; verifica se é um array.</li>
+                <li><strong>.isInteger( )</strong> &rarr; verifica se é um número inteiro.</li>
+                <li><strong>.isFinite( )</strong> &rarr; verifica se é um número finito.</li>
+                <li><strong>.isSafeInteger( )</strong> &rarr; verifica se é um número inteiro seguro.</li>
+                <li><strong>.MAX_VALUE</strong> &rarr; verifica o maior número possível.</li>
+            </ul>
+        </article>
+        <article class="seg">
+                <h2>Operadores matemáticos</h2>
+                <p>
+                    Os operadores são elementos essenciais na linguagem de programação JavaScript. Eles permitem realizar uma variedade de operações e manipulações de dados. Dominar os operadores aritméticos, de atribuição, de comparação, lógicos, de concatenação, ternários e de acesso a propriedades é essencial para escrever código eficiente e expressivo.
+                </p>
+                <h3>Operadores aritméticos</h3>
+                <p>
+                    Os operadores aritméticos são usados para realizar operações matemáticas básicas, como adição (<strong>+</strong>), subtração (<strong>-</strong>), multiplicação (<strong>*</strong>) e divisão (<strong>/</strong>). Além disso, temos o operador de resto (<strong>%</strong>), exponenciação (<strong>**</strong>) e incremento/decremento (<strong>++</strong>/<strong>--</strong>), que podem ser úteis em várias situações.
+                </p>
+                <table>
+                    <caption>Operadores aritméticos</caption>
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descrição</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Adição</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtração</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplicação</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Divisão</td>
+                    </tr>
+                    <tr>
+                        <td>**</td>
+                        <td>Exponencial</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Resto da divisão</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Incrementar</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrementar</td>
+                    </tr>
+                </table>
+                <h3>Operadores de Atribuição</h3>
+                <p>
+                    Os operadores de atribuição são usados para atribuir valores a variáveis. O operador de atribuição básico é o "<strong>=</strong>", mas também existem operadores combinados, como "<strong>+=</strong>", "<strong>-=</strong>", "<strong>*=</strong>", "<strong>/=</strong>", entre outros, que permitem atribuir e operar ao mesmo tempo.
+                </p>
+                <table>
+                    <caption>Operadores de Atribuição</caption>
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Equivale a</th>
+                        <th scope="col">Utilização</th>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>x = y</td>
+                        <td>x = y</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>x = x + y</td>
+                        <td>x += y</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>x = x - y</td>
+                        <td>x -= y</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>x = x * y</td>
+                        <td>x *= y</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>x = x / y</td>
+                        <td> x /= y</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td>x = x % y</td>
+                        <td>x %= y</td>
+                    </tr>
+                </table>
+                <h3>Operadores de Comparação</h3>
+                <p>
+                    Os operadores de comparação são usados para comparar valores e retornar um resultado booleano (verdadeiro ou falso). Exemplos de operadores de comparação incluem "<strong>==</strong>", "<strong>!=</strong>", "<strong>===</strong>", "<strong>!==</strong>", "<strong>&gt;</strong>", "<strong>&lt;</strong>", "<strong>&gt;=</strong>" e "<strong>&lt;=</strong>". Eles são usados principalmente em instruções condicionais e loops.
+                </p>
+                <table>
+                    <caption>Operadores de Comparação</caption>
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <th scope="col">Descrição</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>Igual a</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>Mesmo valor e mesmo tipo</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Diferente de</td>
+                    </tr>
+                    <tr>
+                        <td>!==</td>
+                        <td>Diferente em valor e tipo</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Menor que</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Maior que</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Menor ou igual a</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Maior ou igual a</td>
+                    </tr>
+                </table>
+                <h3>Operadores Lógicos</h3>
+                <p>
+                    Os operadores lógicos são usados para combinar ou inverter valores booleanos. Os operadores "<strong>&&</strong>" (E lógico), "<strong>||</strong>" (OU lógico) e "<strong>!</strong>" (NÃO lógico) são usados para avaliar condições complexas e tomar decisões com base nos resultados.
+                </p>
+                <table>
+                    <caption>Operadores Lógicos</caption>
+                    <tr>
+                        <th scope="col">Operador</th>
+                        <td scope="col">Descrição</td>
+                    </tr>
+                    <tr>
+                        <td>&&</td>
+                        <td>'e' lógico</td>
+                    </tr>
+                    <tr>
+                        <td>||</td>
+                        <td>'ou' lógico</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>'não' lógico</td>
+                    </tr>
+                </table>
+                <h3>Operadores Ternários</h3>
+                <p>
+                    O operador ternário é uma forma concisa de expressar uma instrução condicional em JavaScript. Ele usa a sintaxe "<strong>condição ? valor1 : valor2</strong>" e retorna valor1 se a condição for verdadeira e valor2 se for falsa. É útil para simplificar estruturas condicionais simples.
+                </p>
+                <table>
+                    <caption>Operador Ternário</caption>
+                    <tr>
+                        <th>(condição) ? verdadeiro : falso</th>
+                    </tr>
+                </table>
+                <p>
+                    Um exemplo simples utilizando operador ternário.
+                </p>
+                <aside>
+                    <p>
+                        <strong>idade >= 21 ? 'Maior de idade' : 'Menor de idade'</strong>
+                    </p>
+                    <hr>
+                    <p class="resp">
+                        Se idade for maior ou igual a 21 (verdadeiro), será retornado 'Maior de idade', caso contrário (falso) será retornado 'Menor de idade'.
+                    </p>
+                </aside>
+        </article>
+        <article class="seg">
+            <h2>Estruturas de controle condicional</h2>
+            <p>
+                As estruturas de controle condicional são usadas para determinar quais blocos de código devem ser executados, dependendo de uma condição especificada. Elas são fundamentais para guiar o fluxo de execução do código, permitindo que diferentes ações sejam tomadas com base em diferentes situações.
+            </p>
+            <aside>
+                <p>
+                    <strong>if / else</strong> &rarr; A estrutura condicional mais básica em JavaScript, que permite executar um bloco de código se a condição for verdadeira, e outro bloco se for falsa. <br>Exemplo:
+                </p>
+                <pre>
+                    <code>
+if (idade &lt;= 21) {
+    console.log('Menor de idade')
+} else {
+    console.log('Maior de idade')
+}
+                    </code>
+                </pre>
+                <p class="resp">
+                    Se a idade for menor ou igual a 21, será exibido 'Menor de idade', caso contrário, será exibido 'Maior de idade'.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    <strong>else if</strong> &rarr; especifica uma nova condição de teste caso a primeira condição seja falsa.
+                </p>
+                <pre>
+                    <code>
+if (idade &lt;= 13) {
+    console.log('Criança')
+} else if (idade &lt;= 21) {
+    console.log('Adolescente')
+} else {
+    console.log('Adulto')
+}
+                    </code>
+                </pre>
+                <p class="resp">
+                    Se a idade for menor ou igual a 13, será exibido 'Criança', se for menor ou igual a 21, será exibido 'Adolescente', caso contrário, será exibido 'Adulto'.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    <strong>switch</strong> &rarr; é usada para comparar uma expressão com múltiplos valores e executar diferentes blocos de código dependendo do valor correspondente.
+                </p>
+                <pre>
+                    <code>
+switch (tipoUsuario) {
+  case 'Gerente':
+    console.log('Acesso total')
+    break
+  case 'Funcionário':
+    console.log('Acesso restrito')
+    break
+  default:
+    console.log('Acesso negado')
+    break
+}
+                    </code>
+                </pre>
+                <p class="resp">
+                    O valor atribuido à variável <strong>tipoUsuario</strong> será comparado com os valores dos cases, se o valor for igual a <strong>Gerente</strong> será exibido 'Acesso total', se for igual a <strong>Funcionário</strong> será exibido 'Acesso restrito', caso contrário será exibido 'Acesso negado'.
+                </p>
+            </aside>
+            <p>
+                Obs: <strong>Operador ternário</strong> também é uma forma concisa de escrever uma condição if / else.
+            </p>
+        </article>
+        <article class="seg">
+            <h2>Estruturas de repetição</h2>
+            <p>
+                As estruturas de repetição em JavaScript são ferramentas que permitem repetir um bloco de código várias vezes, até que uma condição seja atingida. São fundamentais para a programação eficiente e elegante. 
+            </p>
+            <aside>
+                <p>
+                    <strong>while ( )</strong> &rarr; estrutura de repetição com teste lógico no início. <br> Exemplo:
+                </p>
+                    <pre>
+                        <code>
+    var c = 1
+    while (c &lt;= 6) {
+        innerHTML += `Passo ${c}`
+        c += 1
+    }              
+                        </code>
+                    </pre>
+                <p class="resp">
+                    Enquanto c for menor ou igual a 6 faça: Mostre na tela o valor de c e depois some 1 a c.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    <strong>do { while ( ) }</strong> &rarr; estrutura de repetição com teste lógico no final. <br> Exemplo:
+                </p>
+                <pre>
+                    <code>
+    var c = 1
+    do {
+        innerHTML += `Passo ${c}`
+        c += 1
+    } while (c &lt;= 6)              
+                        
+                    </code>
+                </pre>
+                <p class="resp">
+                    Faça: Mostre na tela o valor de c e depois some 1 a c enquanto c for menor ou igual a 6.
+                </p>
+            </aside>
+            <aside>
+                <p>
+                    <strong>for (inicio ; teste ; incremento)</strong> &rarr; estrutura de repetição com teste lógico somente se a condição for verdadeira. <br> Exemplo:
+                </p>
+                <pre>
+                    <code>
+for (var c = 1; c &lt;= 6; c += 1) {
+    innerHTML += `Passo ${c}`
+}              
+                    </code>
+                </pre>
+                <p class="resp">
+                    Enquanto a variável de inicio (c = 1) for menor ou igual ao teste (c &lt; = 6) mostre na tela o valor de c, e depois some mais 1 a c (c += 1).
+                </p>
+            </aside>
+        </article>
+        <article class="seg">
+            <h2>Array / Vetor</h2>
+            <p>
+               O array é uma estrutura de dados que armazena uma coleção de elementos, geralmente do mesmo tipo, em uma única variável. Os elementos de um array são acessados por meio de um índice, que começa em 0, ou seja, o primeiro elemento do array tem índice 0, o segundo elemento tem índice 1, e assim por diante. Para criar um array em <strong>JavaScript</strong>, você pode usar <strong>colchetes [ ]</strong> e separar os elementos por vírgulas. <br>Exemplo: 
+            </p>
+            <aside>
+                <pre>
+                    <code>
+var carros = [bmw, audi, mercedes]
+console.log(carros)
+console.log(carros[1])
+- //------ // ------ // ------ // -
+[bmw, audi, mercedes]
+
+audi
+                    </code>
+                </pre>
+                <p class="resp">
+                    Na primeira linha é criado um array chamado carros, e nas 2 linhas seguintes, é mostrado o array completo (<strong>[bmw, audi, mercedes]</strong>), e na outra é mostrado o elemento de índice 1 do array (<strong>audi</strong>).
+                </p>
+            </aside>
+            <ul>
+                <li>.push() &rarr; adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.</li>
+                <li>.sort() &rarr; ordena os elementos de um array em ordem crescente ou alfabética.</li>
+                <li>.length() &rarr; quantidade de elementos dentro do array.</li>
+                <li>.split() &rarr; divide uma string em um array de substrings com base em um separador especificado.</li>
+                <li>.indexOf() &rarr; busca valor dentro do array e retorna o índice da primeira ocorrência do valor especificado, ou -1 se o valor não for encontrado.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h2>Object</h2>
+            <p>
+                O objeto em <strong>JavaScript</strong> é uma estrutura de dados que armazena uma coleção de pares de chave-valor, onde cada chave é uma string que representa o nome de um atributo e o valor é o valor correspondente desse atributo. Para criar um objeto em <strong>JavaScript</strong>, você pode usar <strong>chaves { }</strong> e separar os pares de chave-valor por vírgulas. <br> Exemplo:
+            </p>
+            <aside>
+                <pre>
+                    <code>
+var carro = {
+        marca: 'volkswagen',
+        modelo: 'golf',
+        ano: '2020', 
+        cor: 'preto' 
+    }         
+console.log(carro)
+console.log(carro.modelo)  
+- //------ // ------ // ------ // -  
+{marca: 'volkswagen', modelo: 
+'golf', ano: '2020', cor: 'preto'} 
+
+golf
+           
+                    </code>
+                </pre>
+                <p class="resp">
+                    Nas primeiras linhas é criado um objeto chamado carro, e nas últimas 2 linhas, é mostrado o objeto completo (<strong>{marca: 'volkswagen', modelo: 'golf', ano: '2020', cor: 'preto'}</strong>), e na outra é mostrado o elemento do índice <strong>modelo</strong> do objeto, que seria (<strong>golf</strong>).
+                </p>
+            </aside>
+        </article>
+        <article class="seg">
+            <h2>Funções</h2>
+            <p>
+                As funções no <strong>JavaScript</strong> são blocos de código que realizam tarefas específicas. Elas são um dos principais componentes da linguagem e são fundamentais para escrever código modular, organizado e reutilizável. Para definir uma função você pode usar a palavra-chave <strong>function</strong> ( + nome da função) e os parâmetros entre parênteses separados por vírgulas, e o bloco de código que será executado quando a função for chamada, que é definido entre chaves { }. <br> Exemplo:
+            </p>
+            <aside>
+                <pre>
+                    <code>
+    function quadrado(num) {
+        return num * num
+    }
+                    </code>
+                </pre>
+                <p class="resp">
+                    A função <strong>quadrado</strong> recebe o parâmetro <strong>num</strong> e a declaração <strong>return</strong> retorna o valor do parâmetro multiplicado por ele mesmo (num * num). 
+                </p>
+            </aside>
+            <p>
+                A definição de uma função não a executa. Definir a função é simplesmente nomear a função e especificar o que fazer quando a função é chamada. Para chamar a função podemos usar o <a href="../paginas/event_dom.html" rel="next" target="_target">Eventos DOM</a> (como é mostrado na <a href="../paginas/como_usar.html" rel="prev" target="_blank">página anterior</a>), ou podemos executar realmente as ações especificadas com os parâmetros indicados. Por exemplo, se você definir a função quadrado, você pode chamá-la do seguinte modo:
+            </p>
+            <aside>
+                <pre>
+                    <code>
+    quadrado(4) 
+                    </code>
+                </pre>
+            <p class="resp">
+                O valor retornado da <strong>function quadrado(4)</strong> será 16, pois 4 * 4 = 16.
+            </p>
+            </aside>
+            <p>
+                Uma função pode chamar a si mesma. Por exemplo, a função que calcula os fatoriais recursivamente pode ser definida da seguinte forma:
+            </p>
+            <aside>
+                <pre>
+                    <code>
+function fatorial(n) {
+    if (n == 0 || n == 1) {
+        return 1
+    } else {
+        return n * fatorial(n - 1)
+    }
+}
+                    </code>
+                </pre>
+                <p class="resp">
+                    Se o parâmetro <strong>n</strong> for igual a 0 ou 1, a função retorna 1. Caso contrário, a função retorna o valor de <strong>n</strong> multiplicado pelo fatorial de <strong>n - 1</strong>. 
+                </p>
+            </aside>
+            <p>
+                Uma função que chama a si mesma é chamada de função recursiva. Em alguns casos, a recursividade é análoga a um laço. Ambos executam o código várias vezes, e ambos necessitam de uma condição (para evitar um laço infinito, ou melhor, recursão infinita, neste caso).
+            </p>
+        </article>
+        <article class="seg">
+            <h2>Eventos</h2>
+            <p>
+                Os eventos no JavaScript são ações que ocorrem no navegador e que permitem que o desenvolvedor reaja a essas ações. Eles são uma ferramenta que possibilita a interação entre o usuário e a página web. Os eventos são chamados de "triggers" (acontecimentos) e podem ser de vários tipos, como: clique do mouse, movimento do mouse, pressionar uma tecla, etc. Como é mostrado na <a href="../paginas/como_usar.html">página anterior</a>. Ou para ver alguns exemplos de eventos, <a href="../paginas/event_dom.html" rel="next" target="_blank">clique aqui</a>.
+            </p>
+        </article>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <ul>
+                <li>.length &rarr; quantos caracteres a string tem</li>
+                <li>.charAt( ) &rarr; mostra o caractere na posição desejada</li>
+                <li>.indexOf( ) &rarr; mostra a posição do caractere desejado</li>
+                <li>.lastIndexOf( ) &rarr; mostra a última posição do caractere desejado</li>
+                <li>.substring( ) &rarr; mostra uma parte da string</li>
+                <li>.substr( ) &rarr; mostra uma parte da string</li>
+                <li>.push( ) &rarr; adiciona</li>
+            </ul> 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        <article>
+            <p>Comandos do console para logs</p>
+            <ul>
+                <li>console.log() &rarr; imprime mensagem no console</li>
+                <li>console.info() &rarr; exibe informações informativas no console</li>
+                <li>console.warn() &rarr; registra mensagens de alerta no console</li>
+                <li>console.error() &rarr; registra mensagens de erro no console</li>
+                <li>console.debug() &rarr; emitir uma mensagem de depuração no console</li>
+                <li>console.trace() &rarr; exibir a sequência de chamadas de função que levaram o usuário à posição atual no código</li>
+                <li>console.table() &rarr; exibir dados em formato de tabela no console</li>
+                <li>console.dir() &rarr; exibe uma lista interativa das propriedades de um objeto JavaScript no console</li>
+                <li>console.group() &rarr; agrupa mensagens no console, facilitando a visualização de saídas relacionadas no console</li>
+                <li>console.groupEnd() &rarr; encerra a agrupação de mensagens no console</li>
+                <li>console.groupCollapsed() &rarr; organiza os registros do console em grupos ocultos</li>
+                <li>console.count() &rarr; conta o número de vezes que um comando foi executado</li>
+                <li>console.countReset() &rarr; reseta a contagem para um rótulo específico</li>
+                <li>console.time() &rarr; registra o tempo de execução de um comando</li>
+                <li>console.clear() &rarr; limpa o console</li>
+            </ul>
+            <p>
+                Formatando String
+            </p>
+            <ul>
+                <li>.toUpperCase( ) &rarr; tudo para maiúscula</li>
+                <li>.toLowerCase( ) &rarr; tudo para minúscula</li>
+                <li>.replace( ) &rarr; substitui uma parte de um string por uma substring</li>
+                <li>.trim( ) &rarr; remove espaços em branco no início e no fim da string</li>
+                <li>.repeat( ) &rarr; repete a string</li>
+                <li>.split( ) &rarr; divide uma string em substrings e retorna um array</li>
+                <li>.concat( ) &rarr; junta as strings ou arrays</li>
+                <li>.slice( ) &rarr; extrai uma parte da string ou de um array a partir de um ponto inicial e um ponto final</li>
+                <li>.substr( ) &rarr; extrai caracteres de uma string a partir de um ponto inicial e um ponto final</li>
+                <li>.substring( ) &Rarr; extrai uma parte de uma string, entre dois índices específicados</li>
+            </ul>
+            <p>
+                Formatando Números
+            </p>
+            <ul>
+                <li>.toFixed(n°) &rarr; n° p/ qnt de casas decimais</li>
+                <li>.replace(' ', ' ') &rarr; troca caracteres</li>
+                <li>new Date() &rarr; mostra dia, mês, ano, data e hora atual</li>
+                <li>new Date() + .getHours &rarr; mostra o horário atual</li>
+                <li>new Date() + .getMinutes &rarr; mostra o minuto atual</li>
+                <li>new Date() + .getSeconds &rarr; mostra o segundo atual</li>
+                <li>new Date() + .getMilliseconds &rarr; mostra o milissegundo atual</li>
+                <li>new Date() + .getDay &rarr; mostra o dia da semana atual</li>
+                <li>new Date() + .getDate &rarr; mostra o dia do mês atual</li>
+                <li>new Date() + .getMonth &rarr; mostra o mês atual</li>
+                <li>new Date() + .getFullYear &rarr; mostra o ano atual</li>
+                <li>Math.ceil() &rarr; arredonda para cima</li>
+                <li>Math.floor() &rarr; arredonda para baixo</li>
+                <aside>
+                    <li>.toLocalString( ) &rarr; converte um número para um string, já arredondando e convertendo para a moeda do país (decimal - representar número simples / currency - representar em valor monetário / percent - representar formato percentual)</li>
+                    <p class="resp">
+                        .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</p>
+                </aside>
+            </ul>
+            <p>
+                Acessar / selecionar elementos HTML
+            </p>
+            <ul>
+                <li>document.getElementsByTagName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da tag / ex: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...</li>
+                <li>document.getElementById(' ') &rarr; selecionar o elemento pelo ID / ex: .getElementById('inum'), seleciona o elemento que tem o <strong>id="inum"</strong></li>
+                <li>document.getElementsByName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong> / ex: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade <strong>name="num1"</strong></li>
+                <li>document.getElementsByClassName(' ') &rarr; seleciona o(s) elemento(s) pelo class / ex: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o <strong>class='msg'</strong></li>
+                <li>document.querySelector(' ') &rarr; seleciona o elemento específico / ex: .querySelector('div.img'), seleciona a tag <strong>&lt;div&gt;</strong> com o <strong>class="img"</strong></li>
+                <li>document.querySelectorAll(' ') &rarr; seleciona o(s) elemento(s) específico(s) / ex: .querySelectorAll('.msg'), seleciona todos os elementos que tem o <strong>class="msg"</strong></li>
+            </ul>
+            <p>Outros</p>
+            <ul>
+                <li>document.createElement(' ') &rarr; cria um elemento HTML/ ex: .createElement('img'), cria um elemento &lt;img&gt;</li>
+                <li>document.removeChild(' ') &rarr; remove um elemento HTML/ ex: .removeChild(img), remove a tag &lt;img&gt;</li>
+                <li>document.appendChild(' ') &rarr; adiciona um elemento filho / ex: div.appendChild(img), adiciona a tag &lt;img&gt; dentro da tag &lt;div&gt;</li>
+                <li>document.replaceChild(' ') &rarr; substitui um elemento filho / ex: div.replaceChild(h1, h2), substitui a tag &lt;h2&gt; por &lt;h1&gt;</li>
+                <li>.setAttribute(' ') &rarr; cria um atributo para a tag escolhida / ex: img.setAttribute('id', 'foto'), cria um id="foto" para a tag &lt;img&gt;</li>
+                <li>document.TAG_HTML.style.CSS = ' ' &rarr; altera o estilo CSS de uma tag HTML / ex: document.div.style.background = '#000', muda cor de fundo da tag &lt;div&gt;</li>
+            </ul>
+        </article>
+            
+
+
+         
+            
+            
+        </article>
+        <article class="seg">
+            <ul>
+                <li>window.alert(' janela com alerta na tela ')</li>
+                <li>window.confirm(' janela p/ ok ou cancel ')</li>
+                <li>window.prompt(' janela p/ pergunta ao usuário ') retorna em string</li>
+                <li>document.write(' escreve na tela ') pode usar tags HTML dentro</li>
+            </ul>    
+
+            <ul>
+                <li>.innerText &rarr; retorna o conteúdo de texto de um elemento HTML, sem incluir tags HTML ou estilos CSS.</li>
+                <li>.innerHTML &rarr; retorna o conteúdo de texto de um elemento HTML, incluindo suas tags HTML e estilos CSS.</li>
+                <li>.setAttribute &rarr; muda o atributo valor de um elemento HTML</li>
+            </ul>
+        </article>
+        
+        <br>
+    </main>
+    <footer>
+        <p>
+            Esse site foi feito por <strong>Bruno Henrique</strong> afins de estudos!
+        </p>
+    </footer>
+</body>
+</html>
