@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../estilos/mobile.css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <script src="../script.js"></script>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>JavaScript</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">  
+            <ul>
+                <li><a href="../index.html" rel="prev">Início</a></li>
+                <li><a href="../paginas/como_usar.html" rel="next">Como usar JS</a></li>
+                <li><a href="../paginas/fundamentos.html" rel="next">Fundamentos</a></li>
+                <li><a href="../paginas/event_dom.html" rel="next">Eventos DOM</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h3>Comandos do console</h3>
+            <ul>
+                <li><strong>console.log()</strong> &rarr; imprime mensagem no console</li>
+                <li><strong>console.info()</strong> &rarr; exibe informações informativas no console</li>
+                <li><strong>console.warn()</strong> &rarr; registra mensagens de alerta no console</li>
+                <li><strong>console.error()</strong> &rarr; registra mensagens de erro no console</li>
+                <li><strong>console.debug()</strong> &rarr; emitir uma mensagem de depuração no console</li>
+                <li><strong>console.trace()</strong> &rarr; exibir a sequência de chamadas de função que levaram o usuário à posição atual no código</li>
+                <li><strong>console.table()</strong> &rarr; exibir dados em formato de tabela no console</li>
+                <li><strong>console.dir()</strong> &rarr; exibe uma lista interativa das propriedades de um objeto JavaScript no console</li>
+                <li><strong>console.group()</strong> &rarr; agrupa mensagens no console, facilitando a visualização de saídas relacionadas no console</li>
+                <li><strong>console.groupEnd()</strong> &rarr; encerra a agrupação de mensagens no console</li>
+                <li><strong>console.groupCollapsed()</strong> &rarr; organiza os registros do console em grupos ocultos</li>
+                <li><strong>console.count()</strong> &rarr; conta o número de vezes que um comando foi executado</li>
+                <li><strong>console.countReset()</strong> &rarr; reseta a contagem para um rótulo específico</li>
+                <li><strong>console.time()</strong> &rarr; registra o tempo de execução de um comando</li>
+                <li><strong>console.clear()</strong> &rarr; limpa o console</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>Comandos do alert</h3>
+            <ul>
+                <li><strong>alert()</strong> &rarr; exibe uma caixa de diálogo com uma mensagem</li>
+                <li><strong>confirm()</strong> &rarr; exibe uma caixa de diálogo com uma mensagem e dois botões: "OK" e "Cancelar"</li>
+                <li><strong>prompt()</strong> &rarr; exibe uma caixa de diálogo com uma mensagem e um campo de entrada para o usuário digitar um valor</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>Comandos para selecionar elementos</h3>
+            <ul>
+                <li><strong>document.getElementsByTagName(' ')</strong> &rarr; seleciona o(s) elemento(s) pelo nome da tag.</li>
+                <aside>
+                    <p>
+                        exemplo: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...
+                    </p>    
+                </aside>
+                <li><strong>document.getElementById(' ')</strong> &rarr; seleciona o elemento pelo <strong>id</strong>.</li>
+                <aside>
+                    <p>
+                        exemplo: .getElementById('inum'), seleciona o elemento que tem o id="inum".
+                    </p>
+                </aside>
+                <li><strong>document.getElementsByName(' '</strong>) &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong>.
+                <aside>
+                    <p>
+                        exemplo: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade name="num1".
+                    </p>
+                </aside>
+                <li><strong>document.getElementsByClassName(' ')</strong> &rarr; seleciona o(s) elemento(s) pelo <strong>class</strong>.</li>
+                <aside>
+                    <p>
+                        exemplo: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o class='msg'.
+                    </p>
+                </aside>
+                <li><strong>document.querySelector(' ')</strong> &rarr; seleciona o elemento específico.</li>
+                <aside>
+                    <p>
+                        exemplo: .querySelector('div.img'), seleciona a tag &lt;div&gt; com o class="img".
+                    </p>
+                </aside>
+                <li><strong>document.querySelectorAll(' ')</strong> &rarr; seleciona o(s) elemento(s) específico(s).</li>
+                <aside>
+                    <p>
+                        exemplo: .querySelectorAll('.msg'), seleciona todos os elementos que tem o class="msg".
+                    </p>
+                </aside>
+            </ul>
+        </article>
+        <article class=seg>
+            <h3>Comandos para manipular elementos</h3>
+            <ul>
+                <li><strong>elemento.innerText(' ')</strong> &rarr; atribui texto ao elemento selecionado, sem incluir tags HTML ou estilos CSS.</li>
+                <li><strong>elemento.innerHTML(' ')</strong> &rarr; atribui texto ao elemento selecionado, incluindo tags HTML e estilos CSS.</li>
+                <li><strong>document.TAG_HTML.style.CSS = ' '</strong> &rarr; altera o estilo CSS de uma tag HTML.</li>
+                <aside>
+                    <p>
+                        exemplo: document.div.style.background = '#000', muda cor de fundo da tag &lt;div&gt;.
+                    </p>    
+                </aside>
+                <li><strong>document.write(' ')</strong> &rarr; escreve na tela.
+                <aside>
+                    <p>
+                        exemplo: document.write('Bem-Vindo!'), escreve "Bem-Vindo!" na tela.
+                    </p>
+                </aside>
+                <li><strong>document.createElement(' ')</strong> &rarr; cria um elemento HTML.</li>
+                <aside>
+                    <p>
+                        exemplo: document.createElement('img'), cria um elemento &lt;img&gt;.
+                    </p>
+                </aside> 
+                <li><strong>document.removeChild(' ')</strong> &rarr; remove um elemento filho.</li>
+                <aside>
+                    <p>
+                        exemplo: document.removeChild(img), remove a tag &lt;img&gt;.
+                    </p>
+                </aside>
+                <li><strong>document.appendChild(' ')</strong> &rarr; adiciona um elemento filho.</li>
+                <aside>
+                    <p>
+                        exemplo: div.appendChild(img), adiciona a tag &lt;img&gt; dentro da tag &lt;div&gt;.
+                    </p>
+                </aside>
+                <li><strong>document.replaceChild(' ')</strong> &rarr; substitui um elemento filho.</li>
+                <aside>
+                    <p>
+                        exemplo: div.replaceChild(h1, h2), substitui as tags &lt;h2&gt; por &lt;h1&gt; que estão dentro da tag &lt;div&gt;.
+                    </p>
+                </aside>
+                <li><strong>document.setAttribute(' ')</strong> &rarr; cria ou alterar um atributo para a tag escolhida.</li>
+                <aside>
+                    <p>
+                        exemplo: img.setAttribute('id', 'foto'), cria um id="foto" para a tag &lt;img&gt;.</li>
+                    </p>
+                </aside>
+                <li><strong>elemento.classList.add(' ')</strong> &rarr; adiciona uma ou mais classes ao elemento selecionado.</li>
+                <aside>
+                    <p>
+                        exemplo: img.classList.add('foto', 'dest'), adiciona a classe "foto" e "dest" ao elemento &lt;img&gt;.</li>
+                    </p>
+                </aside>
+                <li><strong>elemento.classList.toggle(' ')</strong> &rarr; adiciona ou remove uma classe ao elemento selecionado.</li>
+                <aside>
+                    <p>
+                        exemplo: img.classList.toggle('dest'), adiciona a classe "dest" ao elemento &lt;img&gt; se ela não estiver adicionada, ou remove se ela estiver adicionada.
+                    </p>
+                </aside>
+                <li><strong>elemento.classList.contains(' ')</strong> &rarr; verifica se um elemento possui uma classe.</li>
+                <aside>
+                    <p>
+                        exemplo: img.classList.contains('foto'), verifica se a classe "foto" está no elemento &lt;img&gt;.
+                    </p>
+                </aside>
+                <li><strong>elemento.classList.replace(' ', ' ')</strong> &rarr; substitui uma classe existente por outra.</li>
+                <aside>
+                    <p>
+                        exemplo: img.classList.replace('foto', 'dest'), substitui a classe "foto" por "dest" no elemento &lt;img&gt;.
+                    </p>
+                </aside>
+                <li><strong>elemento.classList.remove(' ')</strong> &rarr; remove um valor de classe.</li>
+                <aside>
+                    <p>
+                        exemplo: img.classList.remove('foto'), remove a classe "foto" do elemento &lt;img&gt;.
+                    </p>
+                </aside>
+                
+        </article>
+    </main>
+    <footer>
+        <p>
+            Esse site foi feito por <strong>Bruno Henrique</strong> afins de estudos!
+        </p>
+    </footer>
+</body>
+</html>

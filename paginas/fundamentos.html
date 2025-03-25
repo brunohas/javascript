@@ -18,6 +18,7 @@
                 <li><a href="../index.html" rel="prev">Início</a></li>
                 <li><a href="../paginas/como_usar.html" rel="next">Como usar JS</a></li>
                 <li><a href="../paginas/event_dom.html" rel="next">Eventos DOM</a></li>
+                <li><a href="../paginas/comando.html" rel="next">Comandos</a></li>
             </ul>
         </menu>
     </header>
@@ -580,24 +581,7 @@ function fatorial(n) {
             
             
         <article>
-            <p>Comandos do console para logs</p>
-            <ul>
-                <li>console.log() &rarr; imprime mensagem no console</li>
-                <li>console.info() &rarr; exibe informações informativas no console</li>
-                <li>console.warn() &rarr; registra mensagens de alerta no console</li>
-                <li>console.error() &rarr; registra mensagens de erro no console</li>
-                <li>console.debug() &rarr; emitir uma mensagem de depuração no console</li>
-                <li>console.trace() &rarr; exibir a sequência de chamadas de função que levaram o usuário à posição atual no código</li>
-                <li>console.table() &rarr; exibir dados em formato de tabela no console</li>
-                <li>console.dir() &rarr; exibe uma lista interativa das propriedades de um objeto JavaScript no console</li>
-                <li>console.group() &rarr; agrupa mensagens no console, facilitando a visualização de saídas relacionadas no console</li>
-                <li>console.groupEnd() &rarr; encerra a agrupação de mensagens no console</li>
-                <li>console.groupCollapsed() &rarr; organiza os registros do console em grupos ocultos</li>
-                <li>console.count() &rarr; conta o número de vezes que um comando foi executado</li>
-                <li>console.countReset() &rarr; reseta a contagem para um rótulo específico</li>
-                <li>console.time() &rarr; registra o tempo de execução de um comando</li>
-                <li>console.clear() &rarr; limpa o console</li>
-            </ul>
+            
             <p>
                 Formatando String
             </p>
@@ -636,49 +620,35 @@ function fatorial(n) {
                         .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</p>
                 </aside>
             </ul>
-            <p>
-                Acessar / selecionar elementos HTML
-            </p>
+            <p>Arrays</p>
             <ul>
-                <li>document.getElementsByTagName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da tag / ex: .getElementsByTagName('p'), seleciona todas as tags &lt;p&gt;, se quiser escolher somente uma dessas tags &lt;p&gt; colocar o número equivalente, ex: [0] p/ primeira tag &lt;p&gt;, [1] p/ segunda tag &lt;p&gt; e assim adiante...</li>
-                <li>document.getElementById(' ') &rarr; selecionar o elemento pelo ID / ex: .getElementById('inum'), seleciona o elemento que tem o <strong>id="inum"</strong></li>
-                <li>document.getElementsByName(' ') &rarr; seleciona o(s) elemento(s) pelo nome da propriedade <strong>name=" "</strong> / ex: .getElementsByName('num1'), seleciona o(s) elemento(s) que tem a propriedade <strong>name="num1"</strong></li>
-                <li>document.getElementsByClassName(' ') &rarr; seleciona o(s) elemento(s) pelo class / ex: .getElementsByClassName('msg'), seleciona o(s) elemento(s) que tem o <strong>class='msg'</strong></li>
-                <li>document.querySelector(' ') &rarr; seleciona o elemento específico / ex: .querySelector('div.img'), seleciona a tag <strong>&lt;div&gt;</strong> com o <strong>class="img"</strong></li>
-                <li>document.querySelectorAll(' ') &rarr; seleciona o(s) elemento(s) específico(s) / ex: .querySelectorAll('.msg'), seleciona todos os elementos que tem o <strong>class="msg"</strong></li>
+                <li>Array.isArray() &rarr; verifica se é um array</li>
+                <li>Array.from() &rarr; converte uma string em array</li>
+                <li>Array.of() &rarr; converte um array em string</li>
+                <li>Array.prototype.push() &rarr; adiciona um elemento no final do array</li>
+                <li>Array.prototype.pop() &rarr; remove o último elemento do array</li>
+                <li>Array.prototype.shift() &rarr; remove o primeiro elemento do array</li>
+                <li>Array.prototype.unshift() &rarr; adiciona um elemento no início do array</li>
+                <li>Array.prototype.splice() &rarr; remove um ou mais elementos do array</li>
+                <li>Array.prototype.slice() &rarr; retorna uma parte do array</li>
+                <li>Array.prototype.concat() &rarr; concatena dois arrays</li>
+                <li>Array.prototype.join() &rarr; junta todos os elementos de um array em uma string</li>
+                <li>Array.prototype.indexOf() &rarr; retorna a posição do primeiro elemento encontrado</li>
+                <li>Array.prototype.lastIndexOf() &rarr; retorna a posição do último elemento encontrado</li>
+                <li>Array.prototype.includes() &rarr; verifica se um elemento está presente no array</li>
+                <li>Array.prototype.sort() &rarr; ordena os elementos do array</li>
+                <li>Array.prototype.reverse() &rarr; inverte a ordem dos elementos do array</li>
+                <li>Array.prototype.map() &rarr; cria um novo array com os resultados de uma função aplicada a cada elemento do array original</li>
+                <li>Array.prototype.filter() &rarr; cria um novo array com os elementos que passam em uma condição</li>
+                <li>Array.prototype.reduce() &rarr; reduz um array a um único valor</li>
+                <li>Array.prototype.reduceRight() &rarr; reduz um array a um único valor, começando pelo final</li>
+                <li>Array.prototype.every() &rarr; verifica se todos os elementos do array passam em uma condição</li>
+                <li>Array.prototype.some() &rarr; verifica se algum elemento do array passa em uma condição</li>
+                <li>Array.prototype.find() &rarr; retorna o primeiro elemento que passa em uma condição</li>
+                <li>Array.prototype.findIndex() &rarr; retorna o índice do primeiro elemento que passa em uma condição</li>
+                <li>Array.prototype.flat() &rarr; retira os sub-arrays de um array</li>
+                <li>Array.prototype.flatMap() &rarr; retorna um novo array com os resultados de uma função aplicada a cada elemento do array original, e depois retira os sub-arrays</li>
             </ul>
-            <p>Outros</p>
-            <ul>
-                <li>document.createElement(' ') &rarr; cria um elemento HTML/ ex: .createElement('img'), cria um elemento &lt;img&gt;</li>
-                <li>document.removeChild(' ') &rarr; remove um elemento HTML/ ex: .removeChild(img), remove a tag &lt;img&gt;</li>
-                <li>document.appendChild(' ') &rarr; adiciona um elemento filho / ex: div.appendChild(img), adiciona a tag &lt;img&gt; dentro da tag &lt;div&gt;</li>
-                <li>document.replaceChild(' ') &rarr; substitui um elemento filho / ex: div.replaceChild(h1, h2), substitui a tag &lt;h2&gt; por &lt;h1&gt;</li>
-                <li>.setAttribute(' ') &rarr; cria um atributo para a tag escolhida / ex: img.setAttribute('id', 'foto'), cria um id="foto" para a tag &lt;img&gt;</li>
-                <li>document.TAG_HTML.style.CSS = ' ' &rarr; altera o estilo CSS de uma tag HTML / ex: document.div.style.background = '#000', muda cor de fundo da tag &lt;div&gt;</li>
-            </ul>
-        </article>
-            
-
-
-         
-            
-            
-        </article>
-        <article class="seg">
-            <ul>
-                <li>window.alert(' janela com alerta na tela ')</li>
-                <li>window.confirm(' janela p/ ok ou cancel ')</li>
-                <li>window.prompt(' janela p/ pergunta ao usuário ') retorna em string</li>
-                <li>document.write(' escreve na tela ') pode usar tags HTML dentro</li>
-            </ul>    
-
-            <ul>
-                <li>.innerText &rarr; retorna o conteúdo de texto de um elemento HTML, sem incluir tags HTML ou estilos CSS.</li>
-                <li>.innerHTML &rarr; retorna o conteúdo de texto de um elemento HTML, incluindo suas tags HTML e estilos CSS.</li>
-                <li>.setAttribute &rarr; muda o atributo valor de um elemento HTML</li>
-            </ul>
-        </article>
-        
         <br>
     </main>
     <footer>
