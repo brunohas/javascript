@@ -26,13 +26,12 @@
         <article>
             <h2 style="text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); text-decoration: underline;">Eventos DOM</h2>
             <p>
-                Os eventos <strong>DOM em JavaScript</strong> são ações que ocorrem no navegador e que podem ser capturadas e manipuladas pelo JavaScript.
+                Os eventos <strong>DOM em JavaScript</strong> são ações que ocorrem no navegador e que podem ser capturadas e manipuladas pelo JavaScript. A seguir vou apresentar algumas delas, ou você pode <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" rel="external" target="_blank">clicar aqui</a> para ir na página da W3C Schools com todos os eventos.
             </p>
         </article>
         
         <article>
-            
-            <h3>TouchEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_touchevent.asp" rel="external" target="_blank">TouchEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando o usuário toca na tela de um dispositivo touchscreen.
             </p>
@@ -44,7 +43,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>MouseEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_mouseevent.asp" rel="external" target="_blank">MouseEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando o mouse interage com o documento HTML.
             </p>
@@ -62,7 +61,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>UiEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_uievent.asp" rel="external" target="_blank">UiEvent</a></h3>
             <p>
                 Manipula eventos que são acionados pela interface do usuário.
             </p>
@@ -78,7 +77,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>DragEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_dragevent.asp" rel="external" target="_blank">DragEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando elementos são arrastados ou soltos.
             </p>
@@ -93,7 +92,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>KeyboardEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_keyboardevent.asp" rel="external" target="_blank">KeyboardEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando um usuário pressiona uma tecla no teclado.
             </p>
@@ -104,7 +103,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>AnimationEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_animationevent.asp" rel="external" target="_blank">AnimationEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando uma animação CSS é executada.
             </p>
@@ -115,7 +114,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>ClipboardEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_clipboardevent.asp" rel="external" target="_blank">ClipboardEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando a área de transferência é modificada.
             </p>
@@ -126,7 +125,7 @@
             </ul>
         </article>
         <article class=seg>
-            <h3>FocusEvent</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_focusevent.asp" rel="external" target="_blank">FocusEvent</a></h3>
             <p>
                 Manipula eventos que ocorrem quando elementos recebem ou perdem o foco.
             </p>
@@ -138,7 +137,7 @@
             </ul>
         </article>
         <article class="seg">
-            <h3>Event Object Events</h3>
+            <h3><a href="https://www.w3schools.com/jsref/obj_event.asp" rel="external" target="_blank">Event Object</a></h3>
             <p>
                 Todos os objetos de evento no HTML DOM são baseados no <strong>Event Object</strong>, todos tem acesso às propriedades e métodos dele. <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" rel="external" target="_blank">Clique aqui</a> para ir na página da <strong>W3schools</strong> que tem todos os tipos de eventos DOM e suas propriedades.
             </p>
@@ -149,11 +148,23 @@
             </aside>   
         </article>
         <article class="seg">
-            <h4>Propriedades</h4>
+            <h3>Propriedades</h3>
             <p>
-                Fornecem detalhes sobre o evento que foi disparado, essas propriedades permitem que o manipulador de eventos seja mais inteligente e útil.
+                As propriedades fornecem detalhes sobre o evento que foi disparado, essas propriedades permitem que o manipulador de eventos seja mais inteligente e útil.
             </p>
-            
+        </article>
+        <article class="seg">
+            <h3>Métodos de eventos</h3>
+            <p>
+                Os métodos de eventos em JavaScript permitem que o navegador capture ações do usuário, como cliques, pressionamentos de teclas e carregamentos de páginas. Essas ações podem ser manipuladas para tornar a página web mais interativa. Segue os métodos de eventos HTML:
+            </p>
+            <ul>
+                <li><strong>.getModifierState( )</strong> &rarr; retorna true se a tecla modoficadora especificada for pressionada ou ativada <strong>(MouseEvent)</strong>.</li>
+                <li><strong>.getTargetRanges( )</strong> &rarr; retorna um array contendo intervalos de destino que serão afetados pela inserção/exclusão <strong>(InputEvent)</strong>.</li>
+                <li><strong>.preventDefault( )</strong> &rarr; cancela o evento se ele for cancelável, o que significa que a ação padrão que pertence ao evento não ocorrerá <strong>(Event)</strong>.</li>
+                <li><strong>.stopImmediatePropagation( )</strong> &rarr; impede que outros ouvintes do mesmo evento sejam chamados <strong>(Event)</strong>.</li>
+                <li><strong>.stopPropagation( )</strong> &rarr; impede a propagação de um evento durante o fluxo do evento <strong>(Event)</strong>.</li>
+            </ul>
         </article>
     </main>
     <footer>

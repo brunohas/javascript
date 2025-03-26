@@ -264,7 +264,7 @@
                     <caption>Operadores Lógicos</caption>
                     <tr>
                         <th scope="col">Operador</th>
-                        <td scope="col">Descrição</td>
+                        <th scope="col">Descrição</th>
                     </tr>
                     <tr>
                         <td>&&</td>
@@ -447,13 +447,9 @@ audi
                     Na primeira linha é criado um array chamado carros, e nas 2 linhas seguintes, é mostrado o array completo (<strong>[bmw, audi, mercedes]</strong>), e na outra é mostrado o elemento de índice 1 do array (<strong>audi</strong>).
                 </p>
             </aside>
-            <ul>
-                <li>.push() &rarr; adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.</li>
-                <li>.sort() &rarr; ordena os elementos de um array em ordem crescente ou alfabética.</li>
-                <li>.length() &rarr; quantidade de elementos dentro do array.</li>
-                <li>.split() &rarr; divide uma string em um array de substrings com base em um separador especificado.</li>
-                <li>.indexOf() &rarr; busca valor dentro do array e retorna o índice da primeira ocorrência do valor especificado, ou -1 se o valor não for encontrado.</li>
-            </ul>
+            <p>
+                Agora segue alguns <a href="../paginas/comando.html" rel="next">Comandos</a> para utilizar em arrays.
+            </p>
         </article>
         <article class="seg">
             <h2>Object</h2>
@@ -483,6 +479,9 @@ golf
                     Nas primeiras linhas é criado um objeto chamado carro, e nas últimas 2 linhas, é mostrado o objeto completo (<strong>{marca: 'volkswagen', modelo: 'golf', ano: '2020', cor: 'preto'}</strong>), e na outra é mostrado o elemento do índice <strong>modelo</strong> do objeto, que seria (<strong>golf</strong>).
                 </p>
             </aside>
+            <p>
+                Agora segue alguns <a href="../paginas/comando.html" rel="next">Comandos</a> para utilizar em object.
+            </p>
         </article>
         <article class="seg">
             <h2>Funções</h2>
@@ -543,113 +542,6 @@ function fatorial(n) {
                 Os eventos no JavaScript são ações que ocorrem no navegador e que permitem que o desenvolvedor reaja a essas ações. Eles são uma ferramenta que possibilita a interação entre o usuário e a página web. Os eventos são chamados de "triggers" (acontecimentos) e podem ser de vários tipos, como: clique do mouse, movimento do mouse, pressionar uma tecla, etc. Como é mostrado na <a href="../paginas/como_usar.html">página anterior</a>. Ou para ver alguns exemplos de eventos, <a href="../paginas/event_dom.html" rel="next" target="_blank">clique aqui</a>.
             </p>
         </article>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <ul>
-                <li>.length &rarr; quantos caracteres a string tem</li>
-                <li>.charAt( ) &rarr; mostra o caractere na posição desejada</li>
-                <li>.indexOf( ) &rarr; mostra a posição do caractere desejado</li>
-                <li>.lastIndexOf( ) &rarr; mostra a última posição do caractere desejado</li>
-                <li>.substring( ) &rarr; mostra uma parte da string</li>
-                <li>.substr( ) &rarr; mostra uma parte da string</li>
-                <li>.push( ) &rarr; adiciona</li>
-            </ul> 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        <article>
-            
-            <p>
-                Formatando String
-            </p>
-            <ul>
-                <li>.toUpperCase( ) &rarr; tudo para maiúscula</li>
-                <li>.toLowerCase( ) &rarr; tudo para minúscula</li>
-                <li>.replace( ) &rarr; substitui uma parte de um string por uma substring</li>
-                <li>.trim( ) &rarr; remove espaços em branco no início e no fim da string</li>
-                <li>.repeat( ) &rarr; repete a string</li>
-                <li>.split( ) &rarr; divide uma string em substrings e retorna um array</li>
-                <li>.concat( ) &rarr; junta as strings ou arrays</li>
-                <li>.slice( ) &rarr; extrai uma parte da string ou de um array a partir de um ponto inicial e um ponto final</li>
-                <li>.substr( ) &rarr; extrai caracteres de uma string a partir de um ponto inicial e um ponto final</li>
-                <li>.substring( ) &Rarr; extrai uma parte de uma string, entre dois índices específicados</li>
-            </ul>
-            <p>
-                Formatando Números
-            </p>
-            <ul>
-                <li>.toFixed(n°) &rarr; n° p/ qnt de casas decimais</li>
-                <li>.replace(' ', ' ') &rarr; troca caracteres</li>
-                <li>new Date() &rarr; mostra dia, mês, ano, data e hora atual</li>
-                <li>new Date() + .getHours &rarr; mostra o horário atual</li>
-                <li>new Date() + .getMinutes &rarr; mostra o minuto atual</li>
-                <li>new Date() + .getSeconds &rarr; mostra o segundo atual</li>
-                <li>new Date() + .getMilliseconds &rarr; mostra o milissegundo atual</li>
-                <li>new Date() + .getDay &rarr; mostra o dia da semana atual</li>
-                <li>new Date() + .getDate &rarr; mostra o dia do mês atual</li>
-                <li>new Date() + .getMonth &rarr; mostra o mês atual</li>
-                <li>new Date() + .getFullYear &rarr; mostra o ano atual</li>
-                <li>Math.ceil() &rarr; arredonda para cima</li>
-                <li>Math.floor() &rarr; arredonda para baixo</li>
-                <aside>
-                    <li>.toLocalString( ) &rarr; converte um número para um string, já arredondando e convertendo para a moeda do país (decimal - representar número simples / currency - representar em valor monetário / percent - representar formato percentual)</li>
-                    <p class="resp">
-                        .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)</p>
-                </aside>
-            </ul>
-            <p>Arrays</p>
-            <ul>
-                <li>Array.isArray() &rarr; verifica se é um array</li>
-                <li>Array.from() &rarr; converte uma string em array</li>
-                <li>Array.of() &rarr; converte um array em string</li>
-                <li>Array.prototype.push() &rarr; adiciona um elemento no final do array</li>
-                <li>Array.prototype.pop() &rarr; remove o último elemento do array</li>
-                <li>Array.prototype.shift() &rarr; remove o primeiro elemento do array</li>
-                <li>Array.prototype.unshift() &rarr; adiciona um elemento no início do array</li>
-                <li>Array.prototype.splice() &rarr; remove um ou mais elementos do array</li>
-                <li>Array.prototype.slice() &rarr; retorna uma parte do array</li>
-                <li>Array.prototype.concat() &rarr; concatena dois arrays</li>
-                <li>Array.prototype.join() &rarr; junta todos os elementos de um array em uma string</li>
-                <li>Array.prototype.indexOf() &rarr; retorna a posição do primeiro elemento encontrado</li>
-                <li>Array.prototype.lastIndexOf() &rarr; retorna a posição do último elemento encontrado</li>
-                <li>Array.prototype.includes() &rarr; verifica se um elemento está presente no array</li>
-                <li>Array.prototype.sort() &rarr; ordena os elementos do array</li>
-                <li>Array.prototype.reverse() &rarr; inverte a ordem dos elementos do array</li>
-                <li>Array.prototype.map() &rarr; cria um novo array com os resultados de uma função aplicada a cada elemento do array original</li>
-                <li>Array.prototype.filter() &rarr; cria um novo array com os elementos que passam em uma condição</li>
-                <li>Array.prototype.reduce() &rarr; reduz um array a um único valor</li>
-                <li>Array.prototype.reduceRight() &rarr; reduz um array a um único valor, começando pelo final</li>
-                <li>Array.prototype.every() &rarr; verifica se todos os elementos do array passam em uma condição</li>
-                <li>Array.prototype.some() &rarr; verifica se algum elemento do array passa em uma condição</li>
-                <li>Array.prototype.find() &rarr; retorna o primeiro elemento que passa em uma condição</li>
-                <li>Array.prototype.findIndex() &rarr; retorna o índice do primeiro elemento que passa em uma condição</li>
-                <li>Array.prototype.flat() &rarr; retira os sub-arrays de um array</li>
-                <li>Array.prototype.flatMap() &rarr; retorna um novo array com os resultados de uma função aplicada a cada elemento do array original, e depois retira os sub-arrays</li>
-            </ul>
-        <br>
     </main>
     <footer>
         <p>

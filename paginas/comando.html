@@ -169,7 +169,153 @@
                         exemplo: img.classList.remove('foto'), remove a classe "foto" do elemento &lt;img&gt;.
                     </p>
                 </aside>
-                
+        </article>
+        <article class="seg">
+            <h3>Comandos para Strings</h3>
+            <ul>
+                <li><strong>.charAt( )</strong> &rarr; retorna o caractere na posição especificada de uma string.</li>
+                <li><strong>.charCodeAt( )</strong> &rarr; retorna um número que representa o valor de um caractere em uma string, de acordo com a tabela Unicode.</li>
+                <li><strong>.concat( )</strong> &rarr; junta as strings.</li>
+                <li><strong>.endsWith( )</strong> &rarr; verifica se a string termina com o valor especificado, retornado um valor booleano.</li>
+                <li><strong>.includes( )</strong> &rarr; verifica se a string contém um valor especificado, retornado um valor booleano.</li>
+                <li><strong>.indexOf( )</strong> &rarr; retorna o índice do caractere especificado.</li>
+                <li><strong>.lastIndexOf( )</strong> &rarr; retorna o índice da última ocorrência do valor especificado.</li>
+                <li><strong>.length( )</strong> &rarr; retorna o comprimento de uma string.</li>
+                <li><strong>.localeCompare( )</strong> &rarr; compara duas strings e retorna um número que indica a ordem alfabética entre elas. </li>
+                <li><strong>.match( )</strong> &rarr; retorna um array com os trechos do texto que passaram na verificação.</li>
+                <li><strong>.repeat( )</strong> &rarr; repete a string.</li>
+                <li><strong>.replace( , )</strong> &rarr; substitui uma parte de um string por uma substring.</li>
+                <li><strong>.search( )</strong> &rarr; retorna o índice da primeira correspondência entre uma expressão regular e uma string, se não houver retorna -1.</li>
+                <li><strong>.slice( )</strong> &rarr; extrai uma parte da string a partir de um ponto inicial e um ponto final.</li>
+                <li><strong>.split( )</strong> &rarr; divide uma string em um array de substrings e retorna um array.</li>
+                <li><strong>.startsWith( )</strong> &rarr; verifica se a string começa com o valor especificado, retornando uma valor booleano.</li>
+                <li><strong>.substr( )</strong> &rarr; extrai caracteres de uma string a partir de um ponto inicial e um ponto final.</li>
+                <li><strong>.substring( )</strong> &rarr; extrai uma parte de uma string, entre dois índices específicados.</li>
+                <li><strong>.toLocaleUpperCase( )</strong> &rarr; converte uma string para maiúsculas de acordo com as regras da localidade.</li>
+                <li><strong>.toLocaleLoweCase( )</strong>&rarr; converte uma string para minúsculas de acordo com as regras da localidade.</li>
+                <li><strong>.toLowerCase( )</strong> &rarr; converte os caracteres tudo para minúscula.</li>
+                <li><strong>.toUpperCase( )</strong> &rarr; converte os caracteres tudo para maiúscula.</li>
+                <li><strong>.trim( )</strong> &rarr; remove espaços em branco no início e no fim da string.</li>
+                <li><strong>.trimLeft( )</strong> &rarr; remove espaços em branco no início da string.</li>
+                <li><strong>.trimRigth( )</strong> &rarr; remove espaços em branco no final da string.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>Comandos para Números</h3>
+            <ul>
+                <li><strong>.isFinite( )</strong> &rarr; verifica se o valor é número finito.</li>
+                <li><strong>.isInteger( )</strong> &rarr; verifica se o valor é número inteiro.</li>
+                <li><strong>.isNan( )</strong> &rarr; verifica se o valor é Nan (Not A Number) ou não.</li>
+                <li><strong>.isSafeInteger( )</strong> &rarr; verifica se o valor é um número seguro.</li>
+                <li><strong>Math.ceil()</strong> &rarr; arredonda para cima</li>
+                <li><strong>Math.floor()</strong> &rarr; arredonda para baixo</li>
+                <li><strong>.parseFloat( )</strong> &rarr; converte em número real.</li>
+                <li><strong>.parseInt( )</strong> &rarr; converte em número inteiro.</li>
+                <li><strong>.replace(' ', ' ')</strong> &rarr; troca caracteres</li>
+                <li><strong>.toExponential( )</strong> &rarr; formata números em notação exponencial.</li>
+                <li><strong>.toFixed( )</strong> &rarr; formata um número com um número específico de casas decimais.</li>
+                <li><strong>.toPrecision( )</strong> &rarr; formata um número para uma precisão específica. Ele é uma função incorporada ao objeto Number.</li>
+                <li><strong>.toString</strong> &rarr; converte para string.</li>
+                <li><strong>.valueOf( )</strong> &rarr; converte em um valor primitivo.</li>
+                <li><strong>new Date()</strong> &rarr; mostra dia, mês, ano, data e hora atual</li>
+                <li><strong>new Date() + .getHours</strong> &rarr; mostra o horário atual</li>
+                <li><strong>new Date() + .getMinutes</strong> &rarr; mostra o minuto atual</li>
+                <li><strong>new Date() + .getSeconds</strong> &rarr; mostra o segundo atual</li>
+                <li><strong>new Date() + .getMillisecond</strong>s &rarr; mostra o milissegundo atual</li>
+                <li><strong>new Date() + .getDay</strong> &rarr; mostra o dia da semana atual</li>
+                <li><strong>new Date() + .getDate</strong> &rarr; mostra o dia do mês atual</li>
+                <li><strong>new Date() + .getMonth</strong> &rarr; mostra o mês atual</li>
+                <li><strong>new Date() + .getFullYear</strong> &rarr; mostra o ano atual</li>
+                <aside>
+                    <li><strong>.toLocalString( )</strong> &rarr; converte um número para um string, já arredondando e convertendo para a moeda do país (decimal - representar número simples / currency - representar em valor monetário / percent - representar formato percentual)</li>
+                    <p class="resp">
+                        .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) &rarr; formata o número em valor monetário (.toLocaleString = string localizada / 'pt-BR' = localiza em português / style: currency = mostrar em valor monetário / currency: 'BRL' = real brasileiro)
+                    </p>
+                </aside>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>Comandos para Arrays</h3>
+            <ul>
+                <li><strong>.at( )</strong> &rarr; acessa elementos de um array usando um índice, que pode ser positivo ou negativo.</li>
+                <li><strong>.concat( )</strong> &rarr; mescla 2 ou mais arrays.</li>
+                <li><strong>.copyWithin( , , )</strong> &rarr; copia uma sequência de elementos de um array para outra localização no mesmo array.</li>
+                <li><strong>.entries( )</strong> &rarr; retorna um objeto iterador que permite percorrer os pares índice/elemento de um array.</li>
+                <li><strong>.every( )</strong> &rarr; verifica se todos os elementos de um array atendem a uma condição específica, retornando true ou false.</li>
+                <li><strong>.fill(elemento, início, fim)</strong> &rarr; preenche um array com um valor específico, a partir de um índice inicial até um índice final.</li>
+                <li><strong>.filter( )</strong> &rarr; cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.</li>
+                <li><strong>.find( )</strong> &rarr; retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, <strong>undefined</strong> é retornado.</li>
+                <li><strong>.findIndex( )</strong> &rarr; retorna o índice no array do primeiro elemento que satisfizer a função de teste provida. Caso contrário, retorna -1, indicando que nenhum elemento passou no teste.</li>
+                <li><strong>.findLast( )</strong> &rarr; retorna o último elemento do array que satisfizer a função de teste provida. Caso contrário, <strong>undefined</strong> é retornado.</li>
+                <li><strong>.findLastIndex( )</strong> &rarr; pesquisa o array de trás para frente e retorna o índice do primeiro elemento encontrado, ou -1 se o elemento não estiver presente.</li>
+                <li><strong>.flat( )</strong> &rarr; transforma um array em um novo array, concatenando os subarrays em um único array (.flat(Infinity) concatena todos os subarrays).</li>
+                <li><strong>.flatMap( )</strong> &rarr; mapeia cada elemento de um array e nivela o resultado em um novo array.</li>
+                <li><strong>.forEach( )</strong> &rarr; executa uma função fornecida uma vez para cada elemento do array.</li>
+                <li><strong>.from( )</strong> &rarr; cria um novo array a partir de um array-like ou de um iterable object. </li>
+                <li><strong>.fromAsync( )</strong> &rarr; cria uma nova instância de um array copiada superficialmente a partir de um objeto async iterable, iterable ou array-like.</li>
+                <li><strong>.includes( )</strong> &rarr; verifica se um array contém um determinado elemento, retornando true ou false.</li>
+                <li><strong>.indexOf( )</strong> &rarr; busca valor dentro do array e retorna o índice da primeira ocorrência do valor especificado, ou -1 se o valor não for encontrado.</li>
+                <li><strong>.isArray( )</strong> &rarr; verifica se o valor passado é um array.</li>
+                <li><strong>.join( )</strong> &rarr; junta todos os elementos de um array em uma string.</li>
+                <li><strong>.keys( )</strong> &rarr; serve para criar um array com as chaves de um objeto.</li>
+                <li><strong>.lastIndexOf( )</strong> &rarr; busca valor dentro do array e retorna o índice da última ocorrência do valor especificado, ou -1 se o valor não for encontrado.</li>
+                <li><strong>.length( )</strong> &rarr; quantidade de elementos dentro do array.</li>
+                <li><strong>.map( )</strong> &rarr; cria um novo array a partir de um array existente. Ele aplica uma função a cada elemento do array original.</li>
+                <li><strong>.of( )</strong> &rarr; cria um novo array com os elementos passados entre parênteses.</li>
+                <li><strong>.pop( )</strong> &rarr; remove o último elemento de um array e o retorna, alterando o comprimento do array.</li>
+                <li><strong>.push( )</strong> &rarr; adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.</li>
+                <li><strong>.reduce( )</strong> &rarr; reduz um array a um único valor.</li>
+                <li><strong>.reduceRight( )</strong> &rarr; reduz um array em um único valor, da direita para a esquerda.</li>
+                <li><strong>.reverse( )</strong> &rarr; inverte a ordem dos elementos de um array.</li>
+                <li><strong>.shift( )</strong> &rarr; remove o primeiro elemento do array e o retorna, alterando o comprimento do array.</li>
+                <li><strong>.slice( , )</strong> &rarr; copia uma parte de um array, ou seja, para criar um subarray. O array original não é alterado.</li>
+                <li><strong>.some( )</strong> &rarr; verifica se pelo menos um elemento de um array atende a uma determinada condição, retornado true ou false (não modifica o array).</li>
+                <li><strong>.sort( )</strong> &rarr; ordena os elementos de um array em ordem crescente ou alfabética.</li>
+                <li><strong>.splice( )</strong> &rarr; adiciona elementos em uma posição específica do array.</li>
+                <li><strong>.toLocaleString( , )</strong> &rarr; converte os elementos de um array em uma string.</li>
+                <li><strong>.toReversed( )</strong> &rarr; inverte a ordem dos elementos de um array.</li>
+                <li><strong>.toSorted( )</strong> &rarr; ordena os elementos de um array em ordem crescente, retornando um novo array. O array original não é alterado.</li>
+                <li><strong>.toSpliced( , )</strong> &rarr; exclui, adiciona e substitui elementos em um array. Ele também cria um novo array de forma mais eficiente do que os métodos <strong>slice( )</strong> e <strong>concat( )</strong>.</li>
+                <li><strong>.toString( )</strong> &rarr; converter um array em uma string.</li>
+                <li><strong>.unshift( )</strong> &rarr; adiciona um ou mais elementos no início do array.</li>
+                <li><strong>.values( )</strong> &rarr; retorna um array com os valores das propriedades enumeradas de um objeto.</li>
+                <li><strong>.with( , )</strong> &rarr; altera um elemento com base no índice indicado, retornando um array com os valores indicados.</li>
+                <li><strong>[Symbol.iterator]( )</strong> &rarr; retorna um objeto iterador de array que produz o valor de cada índice no array.</li>
+            </ul>
+        </article>
+        <article class="seg">
+            <h3>Comandos para Object</h3>
+            <ul>
+                <li><strong>.assign( )</strong> &rarr; copia os valores de um ou mais objetos para um objeto destino, retornando o objeto de destino modificado.</li>
+                <li><strong>.create( )</strong> &rarr; cria um novo objeto usando um objeto existente como protótipo do objeto recém-criado.</li>
+                <li><strong>.defineProperties( )</strong> &rarr; defini ou modifica as propriedades de um objeto, retornando o objeto modificado.</li>
+                <li><strong>.defineProperty( )</strong> &rarr; adiciona ou modifica propriedades em objetos.</li>
+                <li><strong>.entries( )</strong> &rarr; retorna um array de pares de elemento / índice de um objeto.</li>
+                <li><strong>.freeze( )</strong> &rarr; congela um objeto, não deixa ele ser modificado se tornado um objeto imutável.</li>
+                <li><strong>.fromEntries( )</strong> &rarr; transforma uma lista de pares elemento / índice em um objeto.</li>
+                <li><strong>.getOwnPropertyDescriptor( )</strong> &rarr; permite obter um descritor de propriedades para um objeto.</li>
+                <li><strong>.getOwnPropertyDescriptors( )</strong> &rarr; retorna uma lista de todos os descritores de propriedade de um objeto.</li>
+                <li><strong>.getOwnPropertyNames( )</strong> &rarr; retorna um array com os nomes de todas as propriedades de um objeto.</li>
+                <li><strong>.getOwnPropertySymbols( )</strong> &rarr; retorna um array com todas as propriedades de símbolo de um objeto.</li>
+                <li><strong>.getPrototypeOf( )</strong> &rarr; obter o protótipo de um objeto. O protótipo é o valor da propriedade interna [[Prototype]].</li>
+                <li><strong>.groupBy( )</strong> &rarr; agrupa os elementos de um iterável fornecido de acordo com os valores de string retornados por uma função de retorno de chamada fornecida. O objeto retornado tem propriedades separadas para cada grupo, contendo arrays com os elementos no grupo.</li>
+                <li><strong>.hasOwn( )</strong> &rarr; retorna true se o objeto especificado tiver a propriedade indicada como sua própria propriedade. Se a propriedade for herdada, ou não existir, o método retorna false.</li>
+                <li><strong>.hasOwnProperty( )</strong> &rarr; verifica se um objeto possui uma propriedade específica como sua própria. Ele retorna um valor booleano, true ou false, indicando se a propriedade existe.</li>
+                <li><strong>.is( )</strong> &rarr; verifica se dois valores são iguais.</li>
+                <li><strong>.isExtensible( )</strong> &rarr; verifica se um objeto pode ter novas propriedades adicionadas a ele.</li>
+                <li><strong>.isFrozen( )</strong> &rarr; verifica se um objeto está congelado.</li>
+                <li><strong>.isPrototypeOf( )</strong> &rarr; verifica se um objeto é herdeiro de outro.</li>
+                <li><strong>.isSealed( )</strong> &rarr; verifica se um objeto está selado.</li>
+                <li><strong>.keys( )</strong> &rarr; extrai as chaves de um objeto, retornando um array com as strings correspondentes a cada propriedade.</li>
+                <li><strong>.preventExtensions( )</strong> &rarr; impede que novas propriedades sejam adicionadas a um objeto. É usado para garantir que a estrutura de um objeto permaneça consistente. </li>
+                <li><strong>.propertyIsEnumerable( )</strong> &rarr; verifica se uma propriedade é enumerável, retornando um valor booleano.</li>
+                <li><strong>.seal( )</strong> &rarr; sela um objeto, impedindo a adição de novas propriedades e marcando as existentes como não configuráveis.</li>
+                <li><strong>.setPrototypeOf( )</strong> &rarr; configura o protótipo de um objeto para outro objeto ou null.</li>
+                <li><strong>.toLocaleString( )</strong> &rarr; retorna uma string representando este objeto.</li>
+                <li><strong>.toString( )</strong> &rarr; retorna uma string que representa um objeto. </li>
+                <li><strong>.values( )</strong> &rarr; retorna um array de valores de propriedade enumeráveis com chave de string do próprio objeto.</li>
+                <li><strong>.valueOf( )</strong> &rarr; converte um objeto em um valor primitivo.</li>
+            </ul>
         </article>
     </main>
     <footer>
