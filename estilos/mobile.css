@@ -259,4 +259,8 @@ footer > p {
     article.seg {
         border-radius: 15px;
     }
+
+    aside {
+        margin: 5px 0px;
+    }
 }
